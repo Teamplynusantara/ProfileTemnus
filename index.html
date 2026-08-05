@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teamply Nusantara — Jasa Drone &amp; Foto Udara</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F1EEE3',
+            'cream-2': '#E9E5D7',
+            ink: '#17160F',
+            'ink-soft': '#454438',
+            mid: '#7A776A',
+            line: '#D4CFBC',
+            'line-2': '#C3BDA4',
+            white: '#FBFAF6',
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#F1EEE3] text-[#17160F] font-['Inter',sans-serif] leading-relaxed antialiased">
+
+  <!-- ===== HEADER & NAV ===== -->
+ <header class="sticky top-0 z-50 bg-[#F1EEE3]/88 backdrop-blur-[10px] border-b border-[#D4CFBC]">
+  <nav class="max-w-[1180px] mx-auto px-5 sm:px-[40px] h-[82px] flex items-center justify-between">
+    
+    <!-- Brand / Logo Section (jarak logo & teks dikencangkan dengan gap-2) -->
+    <div class="flex items-center gap-2">
+      <!-- Wrapper Logo & Lingkaran SVG -->
+      <div class="relative w-12 h-12 flex items-center justify-center shrink-0">
+          <circle cx="50" cy="50" r="46" stroke="#17160F" stroke-width="2.4" fill="none" stroke-dasharray="230 60"/>
+        </svg>
+        <img src="asset/Black_and_White_Minimalist_RT_Initial_Logo__1_-removebg-preview.png" alt="Teamply Nusantara Logo" class="w-30 h-30 object-contain relative z-10">
+      </div>
+      <!-- Teks Nama Brand -->
+      <span class="font-['Space_Grotesk',sans-serif] font-bold text-[15px] tracking-[0.02em]">TEAMPLYNUSANTARA</span>
+    </div>
+    
+    <!-- Menu Navigasi -->
+    <div class="hidden md:flex gap-9">
+      <a href="#tentang" class="text-[14px] text-[#454438] font-medium hover:text-[#17160F] relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-[#17160F] hover:after:w-full after:transition-all after:duration-250">Tentang</a>
+      <a href="#layanan" class="text-[14px] text-[#454438] font-medium hover:text-[#17160F] relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-[#17160F] hover:after:w-full after:transition-all after:duration-250">Layanan</a>
+      <a href="#galeri" class="text-[14px] text-[#454438] font-medium hover:text-[#17160F] relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-[#17160F] hover:after:w-full after:transition-all after:duration-250">Galeri</a>
+      <a href="#kontak" class="text-[14px] text-[#454438] font-medium hover:text-[#17160F] relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-[#17160F] hover:after:w-full after:transition-all after:duration-250">Kontak</a>
+    </div>
+    
+    <!-- Tombol CTA -->
+    <a href="#kontak" class="font-['JetBrains_Mono',monospace] text-[12.5px] border border-[#17160F] px-5 py-[10px] rounded-full tracking-[0.03em] hover:bg-[#17160F] hover:text-[#F1EEE3] transition-colors duration-200">Hubungi Kami</a>
+  </nav>
+</header>
+
+  <!-- ===== HERO ===== -->
+  <section class="relative overflow-hidden py-16 lg:py-[96px] border-b border-[#D4CFBC]">
+    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px] grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+      <div>
+        <div class="font-['JetBrains_Mono',monospace] text-[12px] tracking-[0.14em] uppercase text-[#7A776A] flex items-center gap-[10px] mb-[22px] before:content-[''] before:w-[16px] before:h-[1px] before:bg-[#17160F] before:inline-block">
+          Jasa Pembuatan website
+        </div>
+        <h1 class="font-['Space_Grotesk',sans-serif] font-semibold text-[38px] sm:text-[48px] lg:text-[64px] leading-[1.05] tracking-[-0.01em] mb-[26px]">
+          Melihat Nusantara<br>dari <em class="not-italic text-[#7A776A]">sudut yang</em><br>belum pernah ada.
+        </h1>
+        <p class="text-[17px] text-[#454438] max-w-[480px] mb-[34px]">
+         Teamply Nusantara menghadirkan layanan pembuatan website profesional, pengembangan aplikasi web, dan solusi digital untuk bisnis, UMKM, hingga perusahaan di seluruh Indonesia.
+        </p>
+        <div class="flex gap-[14px] items-center mb-[44px]">
+          <a href="#layanan" class="font-['JetBrains_Mono',monospace] text-[13px] bg-[#17160F] text-[#F1EEE3] px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200">
+            Lihat Paket Jasa →
+          </a>
+          <a href="#galeri" class="font-['JetBrains_Mono',monospace] text-[13px] text-[#17160F] px-[6px] py-[14px] tracking-[0.03em] border-b border-[#17160F]">
+            Jelajahi Galeri
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-[38px] pt-[28px] border-t border-[#D4CFBC]">
+          <div>
+            <b class="font-['Space_Grotesk',sans-serif] text-[26px] block">10+</b>
+            <span class="font-['JetBrains_Mono',monospace] text-[11px] text-[#7A776A] uppercase tracking-[0.08em]">Proyek Selesai</span>
+          </div>
+          <div>
+            <b class="font-['Space_Grotesk',sans-serif] text-[26px] block"></b>
+            <span class="font-['JetBrains_Mono',monospace] text-[11px] text-[#7A776A] uppercase tracking-[0.08em]">Kota Terjangkau</span>
+          </div>
+          <div>
+            <b class="font-['Space_Grotesk',sans-serif] text-[26px] block">4</b>
+            <span class="font-['JetBrains_Mono',monospace] text-[11px] text-[#7A776A] uppercase tracking-[0.08em]">Pilot Bersertifikat</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative aspect-square max-w-[340px] lg:max-w-none mx-auto w-full flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full border border-dashed border-[#C3BDA4] animate-[spin_60s_linear_infinite] motion-reduce:animate-none"></div>
+        <div class="absolute inset-[14%] rounded-full border border-dashed border-[#C3BDA4] animate-[spin_44s_linear_infinite_reverse] motion-reduce:animate-none"></div>
+        <svg class="w-[56%]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <img src="asset/Black_and_White_Minimalist_RT_Initial_Logo__1_-removebg-preview.png" alt="Teamply Nusantara Logo">
+        </svg>
+        <span class="absolute font-['JetBrains_Mono',monospace] text-[10.5px] text-[#7A776A] tracking-[0.05em] bg-[#F1EEE3] px-[6px] py-[2px] top-[6%] left-[2%]">ALT 120M</span>
+        <span class="absolute font-['JetBrains_Mono',monospace] text-[10.5px] text-[#7A776A] tracking-[0.05em] bg-[#F1EEE3] px-[6px] py-[2px] bottom-[8%] right-[0%] text-right">-6.402, 106.794</span>
+        <span class="absolute font-['JetBrains_Mono',monospace] text-[10.5px] text-[#7A776A] tracking-[0.05em] bg-[#F1EEE3] px-[6px] py-[2px] top-[46%] -right-[2%]">REC ●</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TENTANG ===== -->
+  <section class="py-[100px] border-b border-[#D4CFBC]" id="tentang">
+    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px]">
+      <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.4fr] gap-[40px] mb-[56px]">
+        <div class="font-['JetBrains_Mono',monospace] text-[12px] tracking-[0.14em] uppercase text-[#7A776A] flex items-center gap-[10px] before:content-[''] before:w-[16px] before:h-[1px] before:bg-[#17160F] before:inline-block">Tentang Kami</div>
+        <h2 class="font-['Space_Grotesk',sans-serif] font-semibold text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.12]">Tim yang menerbangkan kamera untuk bercerita dari langit.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-[64px] items-start">
+        <div>
+          <p class="text-[#454438] text-[16px] mb-[18px]">Teamply Nusantara berdiri dari kegemaran sederhana: melihat sesuatu yang biasa dari ketinggian, dan menemukan cerita baru di dalamnya. Kami tumbuh menjadi tim operator drone bersertifikat yang melayani dokumentasi properti, pernikahan, event korporat, hingga pemetaan lahan untuk industri konstruksi dan pertanian.</p>
+          <p class="text-[#454438] text-[16px] mb-[18px]">Setiap penerbangan direncanakan dengan cermat — jalur, cuaca, dan izin ruang udara diperhitungkan sebelum baling-baling pertama berputar. Hasilnya: rekaman yang bersih, aman, dan konsisten di setiap proyek, di manapun titik koordinatnya di Nusantara.</p>
+          <ul class="list-none mt-[26px]">
+            <li class="font-['JetBrains_Mono',monospace] text-[12.5px] flex justify-between py-[14px] border-t border-[#D4CFBC] text-[#454438]">
+              <b class="font-['Inter',sans-serif] font-semibold text-[#17160F] text-[14px]">Peralatan</b><span>Drone sertifikasi CASA/DJI Enterprise</span>
+            </li>
+            <li class="font-['JetBrains_Mono',monospace] text-[12.5px] flex justify-between py-[14px] border-t border-[#D4CFBC] text-[#454438]">
+              <b class="font-['Inter',sans-serif] font-semibold text-[#17160F] text-[14px]">Cakupan</b><span>Jabodetabek, Jawa, Bali, Sumatra</span>
+            </li>
+            <li class="font-['JetBrains_Mono',monospace] text-[12.5px] flex justify-between py-[14px] border-t border-b border-[#D4CFBC] text-[#454438]">
+              <b class="font-['Inter',sans-serif] font-semibold text-[#17160F] text-[14px]">Legalitas</b><span>Izin terbang &amp; asuransi lengkap</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-[#FBFAF6] border border-[#D4CFBC] rounded-[16px] p-8">
+          <div class="grid grid-cols-2 gap-[24px]">
+            <div class="pb-[24px] mb-[24px] border-b border-[#D4CFBC]">
+              <b class="font-['Space_Grotesk',sans-serif] text-[32px] block mb-1">2019</b>
+              <span class="font-['JetBrains_Mono',monospace] text-[11px] uppercase tracking-[0.07em] text-[#7A776A]">Tahun Berdiri</span>
+            </div>
+            <div class="pb-[24px] mb-[24px] border-b border-[#D4CFBC]">
+              <b class="font-['Space_Grotesk',sans-serif] text-[32px] block mb-1">98%</b>
+              <span class="font-['JetBrains_Mono',monospace] text-[11px] uppercase tracking-[0.07em] text-[#7A776A]">Klien Puas</span>
+            </div>
+            <div>
+              <b class="font-['Space_Grotesk',sans-serif] text-[32px] block mb-1">500m</b>
+              <span class="font-['JetBrains_Mono',monospace] text-[11px] uppercase tracking-[0.07em] text-[#7A776A]">Ketinggian Maks</span>
+            </div>
+            <div>
+              <b class="font-['Space_Grotesk',sans-serif] text-[32px] block mb-1">24 jam</b>
+              <span class="font-['JetBrains_Mono',monospace] text-[11px] uppercase tracking-[0.07em] text-[#7A776A]">Waktu Respons</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAKET JASA ===== -->
+  <section class="py-[100px] border-b border-[#D4CFBC]" id="layanan">
+    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px]">
+      <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.4fr] gap-[40px] mb-[56px]">
+        <div class="font-['JetBrains_Mono',monospace] text-[12px] tracking-[0.14em] uppercase text-[#7A776A] flex items-center gap-[10px] before:content-[''] before:w-[16px] before:h-[1px] before:bg-[#17160F] before:inline-block">Website Price List</div>
+        <div>
+          <h2 class="font-['Space_Grotesk',sans-serif] font-semibold text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.12]">Empat paket, satu website yang tepat.</h2>
+          <p class="text-[#454438] text-[15.5px] mt-2 max-w-[440px]">Pilih paket sesuai kebutuhan website Anda — dari landing page ringan hingga solusi custom.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-[#D4CFBC] border border-[#D4CFBC] rounded-[16px] overflow-hidden">
+        <!-- Paket 01 -->
+        <div class="bg-[#FBFAF6] p-[34px_26px] flex flex-col hover:bg-[#E9E5D7] transition-colors duration-250">
+          <div class="font-['JetBrains_Mono',monospace] text-[11px] text-[#7A776A] mb-[22px] tracking-[0.06em]">PAKET 01</div>
+          <h3 class="font-['Space_Grotesk',sans-serif] font-semibold text-[19px] mb-2">Landing Page</h3>
+          <div class="font-['JetBrains_Mono',monospace] text-[11.5px] text-[#7A776A] mb-[18px] uppercase tracking-[0.04em]">Quickly &amp; Easy Setup</div>
+          <p class="text-[13.5px] text-[#454438] mb-[22px] flex-grow">Quickly and easily meet your core design needs dengan satu halaman yang ringan dan cepat.</p>
+          <ul class="list-none mb-[26px] space-y-[9px]">
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">1 Page Responsive Design</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Mobile-Friendly Layout</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Fast Loading Speed</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Integrasi WhatsApp / Form</li>
+            <li class="text-[13px] text-[#C3BDA4] line-through pl-4 relative before:content-['×'] before:absolute before:left-0 before:text-[#C3BDA4] before:no-underline">Free Domain &amp; Hosting (1 thn)</li>
+          </ul>
+          <div class="font-['JetBrains_Mono',monospace] text-[12px] text-[#7A776A] pt-[18px] border-t border-[#D4CFBC] mb-4">
+            Mulai dari<b class="block font-['Space_Grotesk',sans-serif] text-[20px] text-[#17160F] font-semibold mt-[2px]">Rp 750.000</b>
+          </div>
+          <a href="#kontak" class="font-['JetBrains_Mono',monospace] text-[12px] text-center p-[11px] border border-[#17160F] rounded-full hover:bg-[#17160F] hover:text-[#F1EEE3] transition-colors duration-200">Pesan Paket</a>
+        </div>
+
+        <!-- Paket 02 -->
+        <div class="bg-[#FBFAF6] p-[34px_26px] flex flex-col hover:bg-[#E9E5D7] transition-colors duration-250">
+          <div class="font-['JetBrains_Mono',monospace] text-[11px] text-[#7A776A] mb-[22px] tracking-[0.06em]">PAKET 02</div>
+          <h3 class="font-['Space_Grotesk',sans-serif] font-semibold text-[19px] mb-2">Website</h3>
+          <div class="font-['JetBrains_Mono',monospace] text-[11.5px] text-[#7A776A] mb-[18px] uppercase tracking-[0.04em]">Full-Service Creative</div>
+          <p class="text-[13.5px] text-[#454438] mb-[22px] flex-grow">Full-service creative untuk semua kebutuhan website bisnis Anda, lengkap dan siap tayang.</p>
+          <ul class="list-none mb-[26px] space-y-[9px]">
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Up to 5–10 Pages</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Premium &amp; Custom Design</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">SEO-Friendly Structure</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Google Maps &amp; Form Integration</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Mobile &amp; Tablet Responsive</li>
+          </ul>
+          <div class="font-['JetBrains_Mono',monospace] text-[12px] text-[#7A776A] pt-[18px] border-t border-[#D4CFBC] mb-4">
+            Mulai dari<b class="block font-['Space_Grotesk',sans-serif] text-[20px] text-[#17160F] font-semibold mt-[2px]">Rp 3.000.000</b>
+          </div>
+          <a href="#kontak" class="font-['JetBrains_Mono',monospace] text-[12px] text-center p-[11px] border border-[#17160F] rounded-full hover:bg-[#17160F] hover:text-[#F1EEE3] transition-colors duration-200">Pesan Paket</a>
+        </div>
+
+        <!-- Paket 03 -->
+        <div class="bg-[#FBFAF6] p-[34px_26px] flex flex-col hover:bg-[#E9E5D7] transition-colors duration-250">
+          <div class="font-['JetBrains_Mono',monospace] text-[11px] text-[#7A776A] mb-[22px] tracking-[0.06em]">PAKET 03</div>
+          <h3 class="font-['Space_Grotesk',sans-serif] font-semibold text-[19px] mb-2">Website Admin</h3>
+          <div class="font-['JetBrains_Mono',monospace] text-[11.5px] text-[#7A776A] mb-[18px] uppercase tracking-[0.04em]">Maintenance &amp; Support</div>
+          <p class="text-[13.5px] text-[#454438] mb-[22px] flex-grow">Quickly and easily meet your core maintenance needs, website Anda selalu up-to-date dan optimal.</p>
+          <ul class="list-none mb-[26px] space-y-[9px]">
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Monthly Content &amp; Product Upload</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Technical Bug Fixes</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Routine CMS &amp; Plugin Updates</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Motion Design</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Image &amp; Speed Optimization</li>
+          </ul>
+          <div class="font-['JetBrains_Mono',monospace] text-[12px] text-[#7A776A] pt-[18px] border-t border-[#D4CFBC] mb-4">
+            Mulai dari<b class="block font-['Space_Grotesk',sans-serif] text-[20px] text-[#17160F] font-semibold mt-[2px]">Rp 7.000.000</b>
+          </div>
+          <a href="#kontak" class="font-['JetBrains_Mono',monospace] text-[12px] text-center p-[11px] border border-[#17160F] rounded-full hover:bg-[#17160F] hover:text-[#F1EEE3] transition-colors duration-200">Pesan Paket</a>
+        </div>
+
+        <!-- Paket 04 -->
+        <div class="bg-[#FBFAF6] p-[34px_26px] flex flex-col hover:bg-[#E9E5D7] transition-colors duration-250">
+          <div class="font-['JetBrains_Mono',monospace] text-[11px] text-[#7A776A] mb-[22px] tracking-[0.06em]">PAKET 04</div>
+          <h3 class="font-['Space_Grotesk',sans-serif] font-semibold text-[19px] mb-2">Custom</h3>
+          <div class="font-['JetBrains_Mono',monospace] text-[11.5px] text-[#7A776A] mb-[18px] uppercase tracking-[0.04em]">Tailored For You</div>
+          <p class="text-[13.5px] text-[#454438] mb-[22px] flex-grow">Build your website your way dengan fitur, desain, dan fungsionalitas yang disesuaikan kebutuhan Anda.</p>
+          <ul class="list-none mb-[26px] space-y-[9px]">
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Up to 3 Page</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Fleksibel Custom Design</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Custom Dashboard</li>
+            <li class="text-[13px] text-[#454438] pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#7A776A]">Consultation &amp; Planning</li>
+            <li class="text-[13px] text-[#C3BDA4] line-through pl-4 relative before:content-['×'] before:absolute before:left-0 before:text-[#C3BDA4] before:no-underline">Mobile &amp; Tablet Responsive</li>
+          </ul>
+          <div class="font-['JetBrains_Mono',monospace] text-[12px] text-[#7A776A] pt-[18px] border-t border-[#D4CFBC] mb-4">
+            Mulai dari<b class="block font-['Space_Grotesk',sans-serif] text-[20px] text-[#17160F] font-semibold mt-[2px]">Rp 500.000</b>
+          </div>
+          <a href="#kontak" class="font-['JetBrains_Mono',monospace] text-[12px] text-center p-[11px] border border-[#17160F] rounded-full hover:bg-[#17160F] hover:text-[#F1EEE3] transition-colors duration-200">Pesan Paket</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERI ===== -->
+  <section class="py-[100px] border-b border-[#D4CFBC]" id="galeri">
+    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px]">
+      <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.4fr] gap-[40px] mb-[56px]">
+        <div class="font-['JetBrains_Mono',monospace] text-[12px] tracking-[0.14em] uppercase text-[#7A776A] flex items-center gap-[10px] before:content-[''] before:w-[16px] before:h-[1px] before:bg-[#17160F] before:inline-block">Galeri</div>
+        <h2 class="font-['Space_Grotesk',sans-serif] font-semibold text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.12]">Sekilas pandangan dari ketinggian jelajah kami.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
+        <!-- Gallery 1 -->
+        <div class="relative aspect-[4/3] bg-[#17160F] rounded-[12px] overflow-hidden">
+          <svg class="w-full h-full" viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="225" fill="#17160F"/>
+            <path d="M0 60 C60 40 90 90 150 70 C210 50 240 100 300 75 L300 225 L0 225 Z" fill="#2B2A21"/>
+            <path d="M0 110 C70 90 110 150 160 120 C220 90 260 150 300 130 L300 225 L0 225 Z" fill="#3E3C2F"/>
+            <path d="M40 30 L60 15 L80 30 L60 45 Z" fill="#F1EEE3" opacity=".5"/>
+            <path d="M180 20 L200 8 L220 20 L200 32 Z" fill="#F1EEE3" opacity=".35"/>
+          </svg>
+          <span class="absolute left-[16px] bottom-[14px] font-['JetBrains_Mono',monospace] text-[11px] text-[#F1EEE3] tracking-[0.04em]">Perbukitan Terasering</span>
+          <span class="absolute right-[16px] top-[14px] font-['JetBrains_Mono',monospace] text-[10px] text-[#F1EEE3]/65">40M · 12FPS</span>
+        </div>
+
+        <!-- Gallery 2 -->
+        <div class="relative aspect-[4/3] bg-[#17160F] rounded-[12px] overflow-hidden">
+          <svg class="w-full h-full" viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="225" fill="#17160F"/>
+            <path d="M0 0 L300 0 L300 90 L0 130 Z" fill="#3E3C2F"/>
+            <path d="M0 130 L300 90 L300 130 C220 150 100 150 0 175 Z" fill="#F1EEE3" opacity=".85"/>
+            <path d="M0 175 L300 130 L300 225 L0 225 Z" fill="#2B2A21"/>
+          </svg>
+          <span class="absolute left-[16px] bottom-[14px] font-['JetBrains_Mono',monospace] text-[11px] text-[#F1EEE3] tracking-[0.04em]">Garis Pantai</span>
+          <span class="absolute right-[16px] top-[14px] font-['JetBrains_Mono',monospace] text-[10px] text-[#F1EEE3]/65">80M · WIDE</span>
+        </div>
+
+        <!-- Gallery 3 -->
+        <div class="relative aspect-[4/3] bg-[#17160F] rounded-[12px] overflow-hidden">
+          <svg class="w-full h-full" viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="225" fill="#17160F"/>
+            <g stroke="#4A4839" stroke-width="2">
+              <line x1="0" y1="40" x2="300" y2="40"/>
+              <line x1="0" y1="90" x2="300" y2="90"/>
+              <line x1="0" y1="140" x2="300" y2="140"/>
+              <line x1="0" y1="190" x2="300" y2="190"/>
+              <line x1="50" y1="0" x2="50" y2="225"/>
+              <line x1="130" y1="0" x2="130" y2="225"/>
+              <line x1="210" y1="0" x2="210" y2="225"/>
+              <line x1="270" y1="0" x2="270" y2="225"/>
+            </g>
+            <rect x="55" y="45" width="70" height="40" fill="#3E3C2F"/>
+            <rect x="140" y="95" width="65" height="40" fill="#3E3C2F"/>
+            <rect x="215" y="45" width="50" height="90" fill="#2B2A21"/>
+          </svg>
+          <span class="absolute left-[16px] bottom-[14px] font-['JetBrains_Mono',monospace] text-[11px] text-[#F1EEE3] tracking-[0.04em]">Grid Perkotaan</span>
+          <span class="absolute right-[16px] top-[14px] font-['JetBrains_Mono',monospace] text-[10px] text-[#F1EEE3]/65">150M · MAP</span>
+        </div>
+
+        <!-- Gallery 4 -->
+        <div class="relative aspect-[4/3] bg-[#17160F] rounded-[12px] overflow-hidden">
+          <svg class="w-full h-full" viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="225" fill="#17160F"/>
+            <circle cx="150" cy="112" r="90" fill="#2B2A21"/>
+            <circle cx="150" cy="112" r="65" fill="#3E3C2F"/>
+            <circle cx="150" cy="112" r="38" fill="#4A4839"/>
+            <circle cx="150" cy="112" r="14" fill="#F1EEE3" opacity=".7"/>
+          </svg>
+          <span class="absolute left-[16px] bottom-[14px] font-['JetBrains_Mono',monospace] text-[11px] text-[#F1EEE3] tracking-[0.04em]">Kawah Vulkanik</span>
+          <span class="absolute right-[16px] top-[14px] font-['JetBrains_Mono',monospace] text-[10px] text-[#F1EEE3]/65">300M · TOP</span>
+        </div>
+
+        <!-- Gallery 5 -->
+        <div class="relative aspect-[4/3] bg-[#17160F] rounded-[12px] overflow-hidden">
+          <svg class="w-full h-full" viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="225" fill="#17160F"/>
+            <path d="M0 0 L300 0 L300 225 L0 225 Z" fill="#2B2A21"/>
+            <ellipse cx="90" cy="70" rx="55" ry="30" fill="#3E3C2F"/>
+            <ellipse cx="200" cy="120" rx="70" ry="38" fill="#3E3C2F"/>
+            <ellipse cx="120" cy="170" rx="60" ry="28" fill="#4A4839"/>
+          </svg>
+          <span class="absolute left-[16px] bottom-[14px] font-['JetBrains_Mono',monospace] text-[11px] text-[#F1EEE3] tracking-[0.04em]">Kanopi Hutan</span>
+          <span class="absolute right-[16px] top-[14px] font-['JetBrains_Mono',monospace] text-[10px] text-[#F1EEE3]/65">60M · PATTERN</span>
+        </div>
+
+        <!-- Gallery 6 -->
+        <div class="relative aspect-[4/3] bg-[#17160F] rounded-[12px] overflow-hidden">
+          <svg class="w-full h-full" viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="225" fill="#17160F"/>
+            <path d="M0 100 L300 80 L300 105 L0 125 Z" fill="#3E3C2F"/>
+            <rect x="20" y="20" width="14" height="60" fill="#4A4839"/>
+            <rect x="60" y="10" width="14" height="70" fill="#4A4839"/>
+            <rect x="240" y="15" width="14" height="65" fill="#2B2A21"/>
+            <circle cx="150" cy="180" r="20" fill="#F1EEE3" opacity=".6"/>
+          </svg>
+          <span class="absolute left-[16px] bottom-[14px] font-['JetBrains_Mono',monospace] text-[11px] text-[#F1EEE3] tracking-[0.04em]">Pelabuhan Nelayan</span>
+          <span class="absolute right-[16px] top-[14px] font-['JetBrains_Mono',monospace] text-[10px] text-[#F1EEE3]/65">50M · HARBOR</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA STRIP ===== -->
+  <section class="py-[70px]">
+    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px] flex flex-wrap items-center justify-between gap-6">
+      <h2 class="font-['Space_Grotesk',sans-serif] font-semibold text-[24px] sm:text-[30px] lg:text-[34px] max-w-[520px]">
+        Siap mengambil gambar proyek Anda dari langit?
+      </h2>
+      <a href="#kontak" class="font-['JetBrains_Mono',monospace] text-[13px] bg-[#17160F] text-[#F1EEE3] px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200">
+        Diskusikan Proyek Anda →
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-[#17160F] text-[#F1EEE3] pt-[70px]" id="kontak">
+    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-[40px] pb-[60px] border-b border-[#F1EEE3]/16">
+        <div>
+          <div class="flex items-center gap-3 mb-[18px]">
+            <svg class="w-[34px] h-[34px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="50" cy="50" r="46" stroke="#F1EEE3" stroke-width="2.4" fill="none" stroke-dasharray="230 60"/>
+              <path class="fill-[#F1EEE3]" d="M20 40c8-14 26-13 33 1 5-14 20-9 20 3-3 16-20 24-27 32-2-14-9-19-12-24-8-2-14-6-14-12z"/>
+            </svg>
+            <span class="font-['Space_Grotesk',sans-serif] font-bold text-[15px]">TEAMPLYNUSANTARA</span>
+          </div>
+          <p class="text-[#F1EEE3]/60 text-[14px] max-w-[280px]">Jasa drone dan foto udara profesional yang melayani proyek dokumentasi, pemetaan, dan sinematografi di seluruh Nusantara.</p>
+        </div>
+
+        <div>
+          <h4 class="font-['JetBrains_Mono',monospace] text-[11.5px] uppercase tracking-[0.08em] text-[#F1EEE3]/50 mb-[18px]">Navigasi</h4>
+          <ul class="list-none space-y-[12px]">
+            <li><a href="#tentang" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">Tentang Kami</a></li>
+            <li><a href="#layanan" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">Paket Jasa</a></li>
+            <li><a href="#galeri" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">Galeri</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-['JetBrains_Mono',monospace] text-[11.5px] uppercase tracking-[0.08em] text-[#F1EEE3]/50 mb-[18px]">Kontak</h4>
+          <ul class="list-none space-y-[12px]">
+            <li><a href="mailto:halo@teamplynusantara.id" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">halo@teamplynusantara.id</a></li>
+            <li><a href="tel:+622112345678" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">+62 21 1234 5678</a></li>
+            <li><a href="#" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">Jakarta, Indonesia</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-['JetBrains_Mono',monospace] text-[11.5px] uppercase tracking-[0.08em] text-[#F1EEE3]/50 mb-[18px]">Ikuti Kami</h4>
+          <ul class="list-none space-y-[12px]">
+            <li><a href="#" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">Instagram</a></li>
+            <li><a href="#" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">YouTube</a></li>
+            <li><a href="#" class="text-[14px] text-[#F1EEE3]/85 hover:text-[#F1EEE3] hover:underline">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-4 py-[26px] font-['JetBrains_Mono',monospace] text-[11.5px] text-[#F1EEE3]/45">
+        <span>© 2026 Teamply Nusantara. Seluruh hak cipta dilindungi.</span>
+        <span>ALT ∞ · FLYING SINCE 2019</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
