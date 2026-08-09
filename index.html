@@ -116,7 +116,13 @@
       }
     }
 
-    /* ===== CEGAH SCROLL / GESER HORIZONTAL DI MOBILE ===== */
+    /* handphone and tablet */
+    @media(max-width: 640px) {
+      #temnusLogo{
+        display: none;
+      }
+    }
+
     html, body {
       max-width: 100%;
       overflow-x: hidden;
@@ -186,28 +192,38 @@
 </header>
 
   <!-- ===== HERO ===== -->
-  <section class="relative overflow-hidden py-12 sm:py-16 lg:py-[96px] border-b border-[#D4CFBC]">
-    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px] flex items-center justify-center">
-      <div class="reveal-left text-center max-w-[760px]">
-        <div class="font-['JetBrains_Mono',monospace] text-[11px] sm:text-[12px] tracking-[0.14em] uppercase text-accent flex items-center justify-center gap-[10px] mb-[18px] sm:mb-[22px] before:content-[''] before:w-[16px] before:h-[1px] before:bg-primary before:inline-block">
+  <section class="relative overflow-hidden py-16 lg:py-[96px] border-b border-[#D4CFBC]">
+    <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px] grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+      <div>
+        <div class="font-['JetBrains_Mono',monospace] text-[12px] tracking-[0.14em] uppercase text-accent flex items-center gap-[10px] mb-[22px] before:content-[''] before:w-[16px] before:h-[1px] before:bg-primary before:inline-block">
           Jasa Pembuatan website
         </div>
-        <h1 class="font-['Space_Grotesk',sans-serif] font-semibold text-[32px] xs:text-[38px] sm:text-[48px] lg:text-[64px] leading-[1.08] sm:leading-[1.05] tracking-[-0.01em] mb-[22px] sm:mb-[26px]">
-          Melihat Nusantara<br>dari <em class="not-italic text-accent">sudut yang</em><br>belum pernah ada.
+        <h1 class="font-['Space_Grotesk',sans-serif] font-semibold text-[38px] sm:text-[48px] lg:text-[64px] leading-[1.05] tracking-[-0.01em] mb-[26px]">
+          Membuat website <br> tampil <em class="not-italic text-accent">lebih profesional</em><br>dimata dunia
         </h1>
-        <p class="text-[15.5px] sm:text-[17px] text-secondary max-w-[480px] mx-auto mb-[28px] sm:mb-[34px]">
+        <p class="text-[17px] text-secondary max-w-[480px] mb-[34px]">
          Teamply Nusantara menghadirkan layanan pembuatan website profesional, pengembangan aplikasi web, dan solusi digital untuk bisnis, UMKM, hingga perusahaan di seluruh Indonesia.
         </p>
-        <div class="flex flex-wrap justify-center gap-[14px] items-center mb-[36px] sm:mb-[44px]">
-          <a href="#layanan" class="font-['JetBrains_Mono',monospace] text-[12.5px] sm:text-[13px] bg-primary text-body px-[22px] sm:px-[26px] py-[13px] sm:py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200">
+        <div class="flex gap-[14px] items-center mb-[44px]">
+          <a href="#layanan" class="font-['JetBrains_Mono',monospace] text-[13px] bg-primary text-body px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200">
             Lihat Paket Jasa →
           </a>
-          <a href="#portofolio" class="font-['JetBrains_Mono',monospace] text-[12.5px] sm:text-[13px] text-primary px-[6px] py-[13px] sm:py-[14px] tracking-[0.03em] border-b border-primary">
+          <a href="#portofolio" class="font-['JetBrains_Mono',monospace] text-[13px] text-primary px-[6px] py-[14px] tracking-[0.03em] border-b border-primary">
             Jelajahi Portofolio
           </a>
         </div>
       </div>
 
+      <div id="temnusLogo" class="relative aspect-square max-w-[340px] lg:max-w-none mx-auto w-full flex items-center justify-center">
+        <div class="absolute inset-0 rounded-full border border-dashed border-[#C3BDA4] animate-[spin_60s_linear_infinite] motion-reduce:animate-none"></div>
+        <div class="absolute inset-[14%] rounded-full border border-dashed border-[#C3BDA4] animate-[spin_44s_linear_infinite_reverse] motion-reduce:animate-none"></div>
+        <svg class="w-[56%]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <img src="asset/Black_and_White_Minimalist_RT_Initial_Logo__2_-removebg-preview.png" alt="Teamply Nusantara Logo">
+        </svg>
+        <span class="absolute font-['JetBrains_Mono',monospace] text-[10.5px] text-accent tracking-[0.05em] bg-body px-[6px] py-[2px] top-[6%] left-[2%]">return view(/teamplynusantara);</span>
+        <span class="absolute font-['JetBrains_Mono',monospace] text-[10.5px] text-accent tracking-[0.05em] bg-body px-[6px] py-[2px] bottom-[8%] right-[0%] text-right">class="text-body"</span>
+        <span class="absolute font-['JetBrains_Mono',monospace] text-[10.5px] text-accent tracking-[0.05em] bg-body px-[6px] py-[2px] top-[46%] -right-[2%]">const TN = true</span>
+      </div>
     </div>
   </section>
 
@@ -661,12 +677,22 @@
           <ul class="list-none space-y-[12px]">
             <li>
               <a
-                  href="https://www.instagram.com/teamplynusantara?igsh=MTJpZnRwbXVibTluNw=="
+                  href="https://www.instagram.com/teamplynusantara"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[14px] text-body/85 hover:text-body hover:underline"
               >
                   Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                  href="https://www.tiktok.com/@teamplynusantara"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[14px] text-body/85 hover:text-body hover:underline"
+              >
+                  TikTok
               </a>
             </li>
           </ul>
@@ -830,13 +856,19 @@
     (function () {
       const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 
+      const lastScrollY = window.scrollY;
+      let scrollDir = 'down';
+
+      window.addEventListener('scroll', () => {
+        const currentY = window.scrollY;
+        scrollDir = currentY > lastScrollY ? 'down' : 'up';
+        lastScrollY = currentY
+      }, {passive: true});
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && scrollDir === 'down') {
             entry.target.classList.add('active');
-          } else {
-            // Elemen keluar dari viewport (baik lewat atas maupun bawah) -> reset animasi
-            entry.target.classList.remove('active');
           }
         });
       }, {
@@ -846,6 +878,37 @@
 
       revealEls.forEach((el) => observer.observe(el));
     })();
+  </script>
+
+  <!-- SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://teamplynusantara.com/#website",
+          "url": "https://teamplynusantara.com/",
+          "name": "Teamply Nusantara",
+          "alternateName": "Teamply",
+          "inLanguage": "id-ID"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://teamplynusantara.com/#organization",
+          "name": "Teamply Nusantara",
+          "url": "https://teamplynusantara.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://teamplynusantara.com/asset/Black_and_White_Minimalist_RT_Initial_Logo__2_-removebg-preview.png"
+          },
+          "sameAs": [
+            "https://www.instagram.com/teamplynusantara/",
+            "https://www.tiktok.com/@teamplynusantara"
+          ]
+        }
+      ]
+    }
   </script>
 
 </body>
