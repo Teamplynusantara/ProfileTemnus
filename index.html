@@ -130,6 +130,7 @@
     }
     * {
       max-width: 100%;
+      cursor:default;
     }
 
     /* Hamburger -> X animation */
@@ -160,15 +161,15 @@
 
     <!-- Menu Navigasi (desktop) -->
     <div class="hidden md:flex gap-9">
-      <a href="#tentang" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250">Tentang</a>
-      <a href="#layanan" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250">Layanan</a>
-      <a href="#portofolio" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250">Portofolio</a>
-      <a href="#kontak" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250">Kontak</a>
+      <a href="#tentang" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250 cursor-pointer">Tentang</a>
+      <a href="#layanan" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250 cursor-pointer">Layanan</a>
+      <a href="#portofolio" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250 cursor-pointer">Portofolio</a>
+      <a href="#kontak" class="text-[14px] text-secondary font-medium hover:text-primary relative py-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-250 cursor-pointer">Kontak</a>
     </div>
 
     <div class="flex items-center gap-2 sm:gap-3 shrink-0">
       <!-- Tombol CTA (desktop) -->
-      <a href="#kontak" onclick="openWaModal(''); return false;" class="hidden sm:inline-flex font-['JetBrains_Mono',monospace] text-[12.5px] border border-primary px-5 py-[10px] rounded-full tracking-[0.03em] hover:bg-primary hover:text-body transition-colors duration-200">Hubungi Kami</a>
+      <a href="#kontak" onclick="openWaModal(''); return false;" class="hidden sm:inline-flex font-['JetBrains_Mono',monospace] text-[12.5px] border border-primary px-5 py-[10px] rounded-full tracking-[0.03em] hover:bg-primary hover:text-body transition-colors duration-200 cursor-pointer">Hubungi Kami</a>
 
       <!-- Tombol menu mobile -->
       <button type="button" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Buka menu" aria-controls="mobileMenu" aria-expanded="false" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] shrink-0">
@@ -205,10 +206,10 @@
          Teamply Nusantara menghadirkan layanan pembuatan website profesional, pengembangan aplikasi web, dan solusi digital untuk bisnis, UMKM, hingga perusahaan di seluruh Indonesia.
         </p>
         <div class="flex gap-[14px] items-center mb-[44px]">
-          <a href="#layanan" class="font-['JetBrains_Mono',monospace] text-[13px] bg-primary text-body px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200">
+          <a href="#layanan" class="font-['JetBrains_Mono',monospace] text-[13px] bg-primary text-body px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200 cursor-pointer">
             Lihat Paket Jasa →
           </a>
-          <a href="#portofolio" class="font-['JetBrains_Mono',monospace] text-[13px] text-primary px-[6px] py-[14px] tracking-[0.03em] border-b border-primary">
+          <a href="#portofolio" class="font-['JetBrains_Mono',monospace] text-[13px] text-primary px-[6px] py-[14px] tracking-[0.03em] border-b border-primary cursor-pointer">
             Jelajahi Portofolio
           </a>
         </div>
@@ -344,7 +345,7 @@
             Rp 750.000
           </b>
         </div>
-        <a href="#kontak" onclick="openWaModal('Landing Page'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95">
+        <a href="#kontak" onclick="openWaModal('Landing Page'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95 cursor-pointer">
           Pesan Paket
         </a>
       </div>
@@ -411,7 +412,7 @@
             Rp 3.000.000
           </b>
         </div>
-        <a href="#kontak" onclick="openWaModal('Business Website'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95">
+        <a href="#kontak" onclick="openWaModal('Business Website'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95 cursor-pointer">
           Pesan Paket
         </a>
       </div>
@@ -460,7 +461,7 @@
             Rp 7.000.000
           </b>
         </div>
-        <a href="#kontak" onclick="openWaModal('Website Admin'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95">
+        <a href="#kontak" onclick="openWaModal('Website Admin'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95 cursor-pointer">
           Pesan Paket
         </a>
       </div>
@@ -509,7 +510,7 @@
             Rp 500.000
           </b>
         </div>
-        <a href="#kontak" onclick="openWaModal('Custom'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95">
+        <a href="#kontak" onclick="openWaModal('Custom'); return false;" class="font-['JetBrains_Mono',monospace] text-[12px] text-center py-[12px] px-4 border border-primary text-primary rounded-full transition-all duration-300 ease-out group-hover:border-white group-hover:text-white group-hover:hover:bg-white group-hover:hover:text-[#403B84] hover:scale-[1.02] active:scale-95 cursor-pointer">
           Pesan Paket
         </a>
       </div>
@@ -576,7 +577,7 @@
               <a
                 href="https://www.fathanghani.my.id"
                 target="_blank"
-                class="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:gap-3 transition-all">
+                class="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:gap-3 transition-all cursor-pointer">
                 Lihat Portofolio Mereka
                 →
               </a>
@@ -632,7 +633,7 @@
               <a
                 href="https://www.aksajrenofh.my.id"
                 target="_blank"
-                class="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:gap-3 transition-all">
+                class="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:gap-3 transition-all cursor-pointer">
                 Lihat Portofolio Mereka
                 →
               </a>
@@ -688,7 +689,7 @@
               <a
                 href="https://www.denizrizki.my.id"
                 target="_blank"
-                class="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:gap-3 transition-all">
+                class="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:gap-3 transition-all cursor-pointer">
                 Lihat Portofolio Mereka
                 →
               </a>
@@ -706,7 +707,7 @@
       <h2 class="font-['Space_Grotesk',sans-serif] font-semibold text-[22px] sm:text-[30px] lg:text-[34px] max-w-[520px]">
         Siap membawa cerita bisnis Anda ke internet?
       </h2>
-      <a href="#kontak" onclick="openWaModal(''); return false;" class="font-['JetBrains_Mono',monospace] text-[13px] bg-primary text-body px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200 w-full sm:w-auto justify-center">
+      <a href="#kontak" onclick="openWaModal(''); return false;" class="font-['JetBrains_Mono',monospace] text-[13px] bg-primary text-body px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200 w-full sm:w-auto justify-center cursor-pointer">
         Diskusikan Proyek Anda →
       </a>
     </div>
@@ -727,18 +728,18 @@
         <div>
           <h4 class="font-['JetBrains_Mono',monospace] text-[11.5px] uppercase tracking-[0.08em] text-body/50 mb-[18px]">Navigasi</h4>
           <ul class="list-none space-y-[12px]">
-            <li><a href="#tentang" class="text-[14px] text-body/85 hover:text-body hover:underline">Tentang Kami</a></li>
-            <li><a href="#layanan" class="text-[14px] text-body/85 hover:text-body hover:underline">Paket Jasa</a></li>
-            <li><a href="#portofolio" class="text-[14px] text-body/85 hover:text-body hover:underline">Portofolio</a></li>
+            <li><a href="#tentang" class="text-[14px] text-body/85 hover:text-body hover:underline cursor-pointer">Tentang Kami</a></li>
+            <li><a href="#layanan" class="text-[14px] text-body/85 hover:text-body hover:underline cursor-pointer">Paket Jasa</a></li>
+            <li><a href="#portofolio" class="text-[14px] text-body/85 hover:text-body hover:underline cursor-pointer">Portofolio</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="font-['JetBrains_Mono',monospace] text-[11.5px] uppercase tracking-[0.08em] text-body/50 mb-[18px]">Kontak</h4>
           <ul class="list-none space-y-[12px]">
-            <li><a href="mailto:teamplynusantara@gmail.com" class="text-[14px] text-body/85 hover:text-body hover:underline break-all">teamplynusantara@gmail.com</a></li>
-            <li><a href="tel:+6285212350700" class="text-[14px] text-body/85 hover:text-body hover:underline">+62 852-1235-0700</a></li>
-            <li><a href="#" class="text-[14px] text-body/85 hover:text-body hover:underline">Bogor, Indonesia</a></li>
+            <li><a href="mailto:teamplynusantara@gmail.com" class="text-[14px] text-body/85 hover:text-body hover:underline break-all cursor-pointer">teamplynusantara@gmail.com</a></li>
+            <li><a href="tel:+6285212350700" class="text-[14px] text-body/85 hover:text-body hover:underline cursor-pointer">+62 852-1235-0700</a></li>
+            <li><a href="#" class="text-[14px] text-body/85">Bogor, Indonesia</a></li>
           </ul>
         </div>
 
@@ -750,7 +751,7 @@
                   href="https://www.instagram.com/teamplynusantara"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-[14px] text-body/85 hover:text-body hover:underline"
+                  class="text-[14px] text-body/85 hover:text-body hover:underline cursor-pointer"
               >
                   Instagram
               </a>
@@ -760,7 +761,7 @@
                   href="https://www.tiktok.com/@teamplynusantara"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-[14px] text-body/85 hover:text-body hover:underline"
+                  class="text-[14px] text-body/85 hover:text-body hover:underline cursor-pointer"
               >
                   TikTok
               </a>
@@ -790,17 +791,17 @@
       <h3 class="font-['Space_Grotesk',sans-serif] font-semibold text-[22px] sm:text-[24px] mb-1 pr-8">Diskusikan Proyek Anda</h3>
       <p class="text-secondary text-[14px] mb-6">Isi form berikut, pesan akan otomatis terisi dan langsung terbuka di WhatsApp.</p>
 
-      <form id="waForm" class="space-y-4" onsubmit="submitWaForm(event)">
+      <form id="waForm" class="space-y-6" onsubmit="submitWaForm(event)">
         <div>
           <label for="waNama" class="font-['JetBrains_Mono',monospace] text-[11px] uppercase tracking-[0.05em] text-secondary/70">Nama</label>
           <input type="text" id="waNama" required placeholder="Nama Anda"
-                 class="w-full mt-[6px] px-4 py-[11px] bg-body/40 border border-[#D4CFBC] rounded-[10px] text-[14px] text-primary placeholder:text-secondary/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition" />
+                 class="w-full mt-[6px] px-4 py-[11px] bg-body/40 border border-[#D4CFBC] rounded-[10px] text-[14px] text-primary placeholder:text-secondary/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition cursor-text" />
         </div>
 
         <div>
           <label for="waPaket" class="font-['JetBrains_Mono',monospace] text-[11px] uppercase tracking-[0.05em] text-secondary/70">Jenis Paket / Layanan</label>
           <select id="waPaket"
-                  class="w-full mt-[6px] px-4 py-[11px] bg-body/40 border border-[#D4CFBC] rounded-[10px] text-[14px] text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition">
+                  class="w-full mt-[6px] px-4 py-[11px] bg-body/40 border border-[#D4CFBC] rounded-[10px] text-[14px] text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition cursor-pointer">
             <option value="">Belum tahu / lainnya</option>
             <option value="Landing Page">Landing Page — Rp 750.000</option>
             <option value="Website">Website — Rp 3.000.000</option>
@@ -812,11 +813,23 @@
         <div>
           <label for="waPesan" class="font-['JetBrains_Mono',monospace] text-[11px] uppercase tracking-[0.05em] text-secondary/70">Pesan</label>
           <textarea id="waPesan" rows="3" placeholder="Ceritakan kebutuhan website Anda..."
-                    class="w-full mt-[6px] px-4 py-[11px] bg-body/40 border border-[#D4CFBC] rounded-[10px] text-[14px] text-primary placeholder:text-secondary/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition resize-none"></textarea>
+                    class="w-full mt-[6px] px-4 py-[11px] bg-body/40 border border-[#D4CFBC] rounded-[10px] text-[14px] text-primary placeholder:text-secondary/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition resize-none cursor-text"></textarea>
+        </div>
+
+        <div class="flex gap-4 mt-2 items-start">
+          <input type="checkbox" id="SnK" class="mt-1 w-4 h-4 shrink-0 accent-primary cursor-pointer">
+          <p class="hover:text-primary transition-colors text-sm"
+            id="SnK_txt"
+            onclick="event.stopPropagation()">
+            Dengan mengeklik tombol berikut, Anda sudah dianggap telah membaca, memahami, menyetujui, dan mematuhi seluruh
+            <a href="SnK.html" class="underline font-bold cursor-pointer" target="_blank">Syarat dan Ketentuan yang berlaku.</a>
+          </p=>
         </div>
 
         <button type="submit"
-                class="w-full font-['JetBrains_Mono',monospace] text-[13px] bg-primary text-body px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center justify-center gap-2 hover:-translate-y-[2px] transition-transform duration-200 mt-2">
+                id="waSubmitBtn"
+                disabled
+                class="w-full font-['JetBrains_Mono',monospace] text-[13px] px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center justify-center gap-2 transition-all duration-200 mt-2 bg-gray-300 text-gray-500 cursor-not-allowed opacity-70">
           Kirim ke WhatsApp
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
             <path d="M20.52 3.48A11.94 11.94 0 0 0 12.03 0C5.46 0 .13 5.33.13 11.9c0 2.1.55 4.14 1.6 5.94L0 24l6.32-1.66a11.87 11.87 0 0 0 5.7 1.45h.01c6.57 0 11.9-5.33 11.9-11.9 0-3.18-1.24-6.17-3.41-8.41ZM12.03 21.5a9.6 9.6 0 0 1-4.9-1.34l-.35-.21-3.75.98 1-3.66-.23-.37a9.55 9.55 0 0 1-1.47-5.1c0-5.28 4.3-9.58 9.6-9.58 2.56 0 4.97 1 6.78 2.81a9.53 9.53 0 0 1 2.8 6.78c0 5.29-4.3 9.59-9.48 9.69Zm5.24-7.18c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.17.19-.33.22-.62.07-.29-.14-1.2-.44-2.29-1.4a8.6 8.6 0 0 1-1.58-1.96c-.17-.29-.02-.44.12-.58.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36s-1 .98-1 2.38c0 1.4 1.02 2.76 1.16 2.95.14.19 2.01 3.07 4.88 4.3.68.29 1.21.47 1.63.6.68.22 1.3.19 1.79.11.55-.08 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.13-.26-.2-.55-.34Z"/>
@@ -847,6 +860,46 @@
       document.body.style.overflow = '';
     }
 
+    // SnK
+    const SnKCheckbox = document.getElementById('SnK');
+    const waSubmitBtn = document.getElementById('waSubmitBtn');
+
+    SnKCheckbox.addEventListener('change', function(){
+      if(this.checked){
+        waSubmitBtn.disabled = false;
+
+        waSubmitBtn.classList.remove(
+          'bg-gray-300',
+          'text-gray-500',
+          'cursor-not-allowed',
+          'opacity-70'
+        );
+
+        waSubmitBtn.classList.add(
+          'bg-primary',
+          'text-body',
+          'cursor-pointer',
+          'hover:-translate-y-[2px]'
+        );
+      } else{
+        waSubmitBtn.disabled = true;
+
+        waSubmitBtn.classList.remove(
+          'bg-primary',
+          'text-body',
+          'cursor-pointer',
+          'hover:-translate-y-[2px]'
+        );
+
+        waSubmitBtn.classList.add(
+          'bg-gray-300',
+          'text-gray-500',
+          'cursor-not-allowed',
+          'opacity-70'
+        );
+      }
+    });
+
     // Tutup modal saat klik area luar
     document.getElementById('waModal').addEventListener('click', function (e) {
       if (e.target === this) closeWaModal();
@@ -863,24 +916,50 @@
     function submitWaForm(e) {
       e.preventDefault();
 
+      if (!SnKCheckbox.checked) {
+        return;
+      }
+
       const nama = document.getElementById('waNama').value.trim();
       const paket = document.getElementById('waPaket').value;
       const pesanTambahan = document.getElementById('waPesan').value.trim();
 
       let pesan = `Halo Teamply Nusantara, saya *${nama}*.`;
+
       if (paket) {
         pesan += `\nSaya tertarik dengan paket *${paket}*.`;
       }
+
       if (pesanTambahan) {
         pesan += `\n\nDetail kebutuhan saya:\n${pesanTambahan}`;
       }
+
       pesan += `\n\nMohon info lebih lanjut, terima kasih.`;
 
       const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(pesan)}`;
+
       window.open(url, '_blank');
 
       closeWaModal();
+
       document.getElementById('waForm').reset();
+
+      // Kembalikan tombol ke kondisi disabled
+      waSubmitBtn.disabled = true;
+
+      waSubmitBtn.classList.remove(
+        'bg-primary',
+        'text-body',
+        'cursor-pointer',
+        'hover:-translate-y-[2px]'
+      );
+
+      waSubmitBtn.classList.add(
+        'bg-gray-300',
+        'text-gray-500',
+        'cursor-not-allowed',
+        'opacity-70'
+      );
     }
 
     // ===== SMOOTH SCROLL TANPA MENGUBAH URL (tidak ada #kontak dsb di address bar) =====
@@ -926,7 +1005,7 @@
     (function () {
       const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 
-      const lastScrollY = window.scrollY;
+      let lastScrollY = window.scrollY;
       let scrollDir = 'down';
 
       window.addEventListener('scroll', () => {
