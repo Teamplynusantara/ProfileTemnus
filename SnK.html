@@ -64,7 +64,7 @@
       html,
       body {
         max-width: 100%;
-        overflow-x: hidden;
+        overflow-x: clip;
         position: relative;
       }
 
@@ -162,6 +162,67 @@
       }
 
       /* ===== TOC ===== */
+      .toc-sidebar {
+        align-self: start;
+      }
+
+      .toc-wrapper {
+        max-height: calc(100vh - 112px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 6px;
+        scrollbar-width: thin;
+        scrollbar-color: #bcb8d6 transparent;
+      }
+
+      /* DESKTOP */
+      @media (min-width: 1024px) {
+        .toc-sidebar {
+          position: sticky;
+          top: 92px;
+        }
+      }
+
+      /* MOBILE + TABLET */
+      @media (max-width: 1023px) {
+        .toc-sidebar {
+          position: sticky;
+          top: 72px;
+          z-index: 40;
+        }
+
+        .toc-wrapper {
+          max-height: 180px;
+          padding: 0.75rem;
+          background: rgba(251, 250, 246, 0.95);
+          border: 1px solid #d4cfbc;
+          border-radius: 14px;
+          backdrop-filter: blur(12px);
+          box-shadow: 0 4px 16px rgba(17, 16, 46, 0.06);
+        }
+
+        .toc-wrapper > div:first-child {
+          margin-bottom: 0.5rem;
+        }
+
+        .toc-link {
+          font-size: 0.78rem;
+          padding: 0.35rem 0.55rem;
+        }
+      }
+
+      .toc-wrapper::-webkit-scrollbar{
+        width: 5px;
+      }
+
+      .toc-wrapper::-webkit-scrollbar-track{
+        background: transparent;
+      }
+
+      .toc-wrapper::-webkit-scrollbar-thumb{
+        background: #bcb8d6;
+        border-radius: 999px;
+      }
 
       .toc-link {
         display: block;
@@ -195,20 +256,6 @@
           transition: none !important;
         }
       }
-
-      /* ===== MOBILE ===== */
-
-      @media (max-width: 767px) {
-        .snk-content h2 {
-          font-size: 1.2rem;
-          margin-top: 2.5rem;
-        }
-
-        .snk-content p,
-        .snk-content li {
-          font-size: 0.9rem;
-        }
-      }
     </style>
   </head>
 
@@ -220,7 +267,6 @@
     <header
       class="sticky top-0 z-50 bg-body/90 backdrop-blur-md border-b border-[#d4d0e6]"
     >
-      ```
       <div class="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div class="h-[72px] flex items-center justify-between">
           <!-- Logo / Brand -->
@@ -262,7 +308,6 @@
           </a>
         </div>
       </div>
-      ```
     </header>
 
     <!-- =========================================================
@@ -270,7 +315,6 @@
   ========================================================== -->
 
     <main>
-      ```
       <section class="pt-16 sm:pt-24 pb-12 sm:pb-16">
         <div class="max-w-[1100px] mx-auto px-5 sm:px-8">
           <div class="max-w-[780px] reveal">
@@ -317,8 +361,8 @@
            TABLE OF CONTENTS
       ====================================================== -->
 
-            <aside class="hidden lg:block">
-              <div class="sticky top-[100px]">
+            <aside class="lg:block toc-sidebar">
+              <div class="toc-wrapper">
                 <div
                   class="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.12em] text-secondary/50 mb-4 "
                 >
@@ -1184,7 +1228,6 @@
           </div>
         </div>
       </section>
-      ```
     </main>
 
     <!-- =========================================================
@@ -1192,7 +1235,6 @@
   ========================================================== -->
 
     <footer class="border-t border-[#d4d0e6]">
-      ```
       <div class="max-w-[1100px] mx-auto px-5 sm:px-8">
         <div
           class="py-8 flex flex-col sm:flex-row items-center justify-between gap-4"
@@ -1211,7 +1253,6 @@
           </a>
         </div>
       </div>
-      ```
     </footer>
 
     <!-- =========================================================
