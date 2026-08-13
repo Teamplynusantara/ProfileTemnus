@@ -143,7 +143,7 @@
 <body class="bg-body text-primary font-['Inter',sans-serif] leading-relaxed antialiased overflow-x-hidden">
 
   <!-- ===== HEADER & NAV ===== -->
- <header class="sticky top-0 z-50 bg-body/88 backdrop-blur-[10px] border-b border-[#D4CFBC]">
+ <header class="fixed top-0 left-0 right-0 z-50 bg-body/88 backdrop-blur-[10px] border-b border-[#D4CFBC]">
   <nav class="max-w-[1180px] mx-auto px-5 sm:px-[40px] h-[72px] sm:h-[82px] flex items-center justify-between">
 
     <!-- Brand / Logo Section -->
@@ -193,7 +193,7 @@
 </header>
 
   <!-- ===== HERO ===== -->
-  <section class="relative overflow-hidden py-16 lg:py-[96px] border-b border-[#D4CFBC]">
+  <section class="relative overflow-hidden pt-[116px] pb-16 lg:pt-[1568x] lg:pb-[96px] border-b border-[#D4CFBC]">
     <div class="max-w-[1180px] mx-auto px-5 sm:px-[40px] grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
       <div>
         <div class="font-['JetBrains_Mono',monospace] text-[12px] tracking-[0.14em] uppercase text-accent flex items-center gap-[10px] mb-[22px] before:content-[''] before:w-[16px] before:h-[1px] before:bg-primary before:inline-block">
@@ -209,8 +209,8 @@
           <a href="#layanan" class="font-['JetBrains_Mono',monospace] text-[13px] bg-primary text-body px-[26px] py-[14px] rounded-full tracking-[0.03em] inline-flex items-center gap-2 hover:-translate-y-[2px] transition-transform duration-200 cursor-pointer">
             Lihat Paket Jasa →
           </a>
-          <a href="#portofolio" class="font-['JetBrains_Mono',monospace] text-[13px] text-primary px-[6px] py-[14px] tracking-[0.03em] border-b border-primary cursor-pointer">
-            Jelajahi Portofolio
+          <a href="/SnK.html" class="font-['JetBrains_Mono',monospace] text-[13px] text-primary px-[6px] py-[14px] tracking-[0.03em] border-b border-primary cursor-pointer">
+            Syarat & Ketentuan
           </a>
         </div>
       </div>
@@ -245,7 +245,7 @@
               <b class="font-['Inter',sans-serif] font-semibold text-primary text-[14px] flex items-center">Framework</b><span>Tailwind CSS, Laravel, dll</span>
             </li>
             <li class="font-['JetBrains_Mono',monospace] text-[12px] sm:text-[12.5px] flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 py-[14px] border-t border-[#D4CFBC] text-secondary text-left sm:text-right">
-              <b class="font-['Inter',sans-serif] font-semibold text-primary text-[14px] flex items-center">Cakupan</b><span>Pulau Jawa</span>
+              <b class="font-['Inter',sans-serif] font-semibold text-primary text-[14px] flex items-center">Cakupan</b><span>Indonesia</span>
             </li>
             <li class="font-['JetBrains_Mono',monospace] text-[12px] sm:text-[12.5px] flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 py-[14px] border-t border-b border-[#D4CFBC] text-secondary text-left sm:text-right">
               <b class="font-['Inter',sans-serif] font-semibold text-primary text-[14px] flex items-center">Kualifikasi</b><span>Sertifikat Profesional<br> (Ditandatangani oleh perusahaan)</span>
@@ -332,11 +332,24 @@
             <svg class="w-4 h-4 text-accent shrink-0 mt-0.5 group-hover:text-[#B8B4E0] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
             <span>Integrasi WhatsApp / Form</span>
           </li>
-          <li class="text-[13px] text-[#C3BDA4] line-through flex items-start gap-2.5 group-hover:text-white/30 transition-colors duration-300">
-            <svg class="w-4 h-4 text-[#C3BDA4] shrink-0 mt-0.5 group-hover:text-white/30 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          <li class="text-[13px] text-secondary flex items-start gap-2.5 group-hover:text-white/90 transition-colors duration-300">
+            <svg class="w-4 h-4 text-accent shrink-0 mt-0.5 group-hover:text-[#B8B4E0] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
             <span>Free Domain &amp; Hosting (1 thn)</span>
           </li>
         </ul>
+
+        <!-- Maintenance Opsional -->
+        <div class="mt-auto mb-[18px] p-[12px_14px] rounded-[10px] border border-[#D4CFBC] bg-body/30 group-hover:bg-white/10 group-hover:border-[#5A54A0] transition-colors duration-300">
+          <div class="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.04em] text-accent group-hover:text-[#B8B4E0]">
+            Maintenance Opsional
+          </div>
+          <div class="text-[12px] text-secondary mt-1 group-hover:text-white/90">
+            Mulai <b class="font-semibold text-primary group-hover:text-white">Rp 50.000 / bulan</b>
+          </div>
+          <div class="text-[11px] text-secondary/70 mt-1 group-hover:text-white/60">
+            Update konten, produk, perubahan minor &amp; maintenance ringan.
+          </div>
+        </div>
 
         <!-- Price & CTA -->
         <div class="font-['JetBrains_Mono',monospace] text-[12px] text-accent pt-[18px] border-t border-[#D4CFBC] mb-5 group-hover:text-[#B8B4E0] group-hover:border-[#5A54A0] transition-colors duration-300">
@@ -455,6 +468,19 @@
           </li>
         </ul>
 
+        <!-- Maintenance Opsional -->
+        <div class="mt-auto mb-[18px] p-[12px_14px] rounded-[10px] border border-[#D4CFBC] bg-body/30 group-hover:bg-white/10 group-hover:border-[#5A54A0] transition-colors duration-300">
+          <div class="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.04em] text-accent group-hover:text-[#B8B4E0]">
+            Maintenance Opsional
+          </div>
+          <div class="text-[12px] text-secondary mt-1 group-hover:text-white/90">
+            Mulai <b class="font-semibold text-primary group-hover:text-white">Rp 350.000 / bulan</b>
+          </div>
+          <div class="text-[11px] text-secondary/70 mt-1 group-hover:text-white/60">
+            Update konten, produk, perubahan minor &amp; maintenance ringan.
+          </div>
+        </div>
+
         <div class="font-['JetBrains_Mono',monospace] text-[12px] text-accent pt-[18px] border-t border-[#D4CFBC] mb-5 group-hover:text-[#B8B4E0] group-hover:border-[#5A54A0] transition-colors duration-300">
           Mulai dari
           <b class="block font-['Space_Grotesk',sans-serif] text-[22px] text-primary font-semibold mt-[2px] group-hover:text-white transition-colors duration-300">
@@ -498,11 +524,24 @@
             <svg class="w-4 h-4 text-accent shrink-0 mt-0.5 group-hover:text-[#B8B4E0] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
             <span>Konsultasi &amp; Planning</span>
           </li>
-          <li class="text-[13px] text-[#C3BDA4] line-through flex items-start gap-2.5 group-hover:text-white/30 transition-colors duration-300">
-            <svg class="w-4 h-4 text-[#C3BDA4] shrink-0 mt-0.5 group-hover:text-white/30 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          <li class="text-[13px] text-secondary flex items-start gap-2.5 group-hover:text-white/90 transition-colors duration-300">
+            <svg class="w-4 h-4 text-accent shrink-0 mt-0.5 group-hover:text-[#B8B4E0] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
             <span>Free Domain &amp; Hosting (1 thn)</span>
           </li>
         </ul>
+
+        <!-- Maintenance Opsional -->
+        <div class="mt-auto mb-[18px] p-[12px_14px] rounded-[10px] border border-[#D4CFBC] bg-body/30 group-hover:bg-white/10 group-hover:border-[#5A54A0] transition-colors duration-300">
+          <div class="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.04em] text-accent group-hover:text-[#B8B4E0]">
+            Maintenance Opsional
+          </div>
+          <div class="text-[12px] text-secondary mt-1 group-hover:text-white/90">
+            Mulai <b class="font-semibold text-primary group-hover:text-white">Rp 70.000 / bulan</b>
+          </div>
+          <div class="text-[11px] text-secondary/70 mt-1 group-hover:text-white/60">
+            Update konten, produk, perubahan minor &amp; maintenance ringan.
+          </div>
+        </div>
 
         <div class="font-['JetBrains_Mono',monospace] text-[12px] text-accent pt-[18px] border-t border-[#D4CFBC] mb-5 group-hover:text-[#B8B4E0] group-hover:border-[#5A54A0] transition-colors duration-300">
           Mulai dari
