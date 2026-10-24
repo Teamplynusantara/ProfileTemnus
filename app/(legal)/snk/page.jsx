@@ -1,419 +1,106 @@
-<!doctype html>
+import Link from 'next/link';
+import Reveal from '@/components/Reveal';
+import { SITE } from '@/data/site';
 
-<html lang="id" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+export const metadata = {
+  title: 'Syarat & Ketentuan',
+  description:
+    'Syarat dan Ketentuan layanan Teamply Nusantara — mengatur proses diskusi, pemesanan, pengerjaan, pembayaran, hingga penyelesaian proyek.',
+  alternates: { canonical: '/snk/' },
+  openGraph: {
+    title: 'Syarat & Ketentuan — Teamply Nusantara',
+    url: '/snk/',
+  },
+};
 
-    <title>Syarat & Ketentuan — Teamply Nusantara</title>
+/** Daftar isi — label harus selaras dengan id section di bawah. */
+const TOC = [
+  { id: 'definisi', label: '01. Definisi' },
+  { id: 'penerima', label: '02. Penerima S&K' },
+  { id: 'pengguna', label: '03. Pengguna Jasa' },
+  { id: 'pemesanan', label: '04. Pemesanan' },
+  { id: 'harga', label: '05. Harga & Pembayaran' },
+  { id: 'pengerjaan', label: '06. Pengerjaan' },
+  { id: 'revisi', label: '07. Revisi' },
+  { id: 'materi', label: '08. Materi & Konten' },
+  { id: 'pihak-ketiga', label: '09. Pihak Ketiga' },
+  { id: 'domain', label: '10. Domain' },
+  { id: 'tanggung-jawab', label: '11. Tanggung Jawab' },
+  { id: 'serah-terima', label: '12. Serah Terima' },
+  { id: 'pembatalan', label: '13. Pembatalan' },
+  { id: 'refund', label: '14. Pengembalian Dana' },
+  { id: 'privasi', label: '15. Privasi' },
+  { id: 'pelanggaran', label: '16. Pelanggaran' },
+  { id: 'darurat', label: '17. Keadaan Darurat' },
+  { id: 'perubahan', label: '18. Perubahan S&K' },
+  { id: 'hukum', label: '19. Hukum' },
+  { id: 'pemisahan', label: '20. Pemisahan' },
+  { id: 'hubungi', label: '21. Hubungi Kami' },
+];
 
-    <meta
-      name="description"
-      content="Syarat dan Ketentuan layanan Teamply Nusantara."
-    />
-
-    <!-- Favicon -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      href="asset/Black_and_White_Minimalist_RT_Initial_Logo__2_-removebg-preview.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="asset/Black_and_White_Minimalist_RT_Initial_Logo__2_-removebg-preview.png"
-    />
-
-    <!-- Tailwind CSS -->
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Tailwind Config -->
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              body: "#e9e8fc",
-              primary: "#26237a",
-              secondary: "#11102e",
-              accent: "#615ebf",
-            },
-            fontFamily: {
-              display: ['"Space Grotesk"', "sans-serif"],
-              body: ["Inter", "sans-serif"],
-              mono: ['"JetBrains Mono"', "monospace"],
-            },
-          },
-        },
-      };
-    </script>
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      html,
-      body {
-        max-width: 100%;
-        overflow-x: clip;
-        position: relative;
-      }
-
-      body {
-        font-family: "Inter", sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      /* ===== SCROLL REVEAL ===== */
-
-      .reveal {
-        opacity: 0;
-        transform: translateY(28px);
-        transition:
-          opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* ===== CONTENT ===== */
-
-      .snk-content h2 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 1.35rem;
-        line-height: 1.35;
-        font-weight: 600;
-        color: #26237a;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        scroll-margin-top: 110px;
-      }
-
-      .snk-content h2:first-child {
-        margin-top: 0;
-      }
-
-      .snk-content p {
-        color: #11102e;
-        font-size: 0.95rem;
-        line-height: 1.85;
-        margin-bottom: 1rem;
-      }
-
-      .snk-content ol {
-        margin: 0.75rem 0 1.25rem 1.5rem;
-        padding-left: 0.75rem;
-      }
-
-      .snk-content ul {
-        margin: 0.75rem 0 1.25rem 1.5rem;
-        padding-left: 0.75rem;
-      }
-
-      .snk-content li {
-        color: #11102e;
-        font-size: 0.95rem;
-        line-height: 1.8;
-        margin-bottom: 0.5rem;
-        padding-left: 0.25rem;
-      }
-
-      .snk-content ol li::marker {
-        color: #615ebf;
-        font-weight: 600;
-      }
-
-      .snk-content ul li::marker {
-        color: #615ebf;
-      }
-
-      .snk-content strong {
-        color: #26237a;
-        font-weight: 600;
-      }
-
-      .snk-content em {
-        color: #26237a;
-      }
-
-      .snk-content a {
-        color: #615ebf;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
-
-      .snk-content a:hover {
-        color: #26237a;
-      }
-
-      /* ===== TOC ===== */
-      .toc-sidebar {
-        align-self: start;
-      }
-
-      .toc-wrapper {
-        max-height: calc(100vh - 112px);
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding-right: 6px;
-        scrollbar-width: thin;
-        scrollbar-color: #bcb8d6 transparent;
-      }
-
-      /* DESKTOP */
-      @media (min-width: 1024px) {
-        .toc-sidebar {
-          position: sticky;
-          top: 92px;
-        }
-      }
-
-      /* MOBILE + TABLET */
-      @media (max-width: 1023px) {
-        .toc-sidebar {
-          position: sticky;
-          top: 72px;
-          z-index: 40;
-        }
-
-        .toc-wrapper {
-          max-height: 180px;
-          padding: 0.75rem;
-          background: rgba(251, 250, 246, 0.95);
-          border: 1px solid #d4cfbc;
-          border-radius: 14px;
-          backdrop-filter: blur(12px);
-          box-shadow: 0 4px 16px rgba(17, 16, 46, 0.06);
-        }
-
-        .toc-wrapper > div:first-child {
-          margin-bottom: 0.5rem;
-        }
-
-        .toc-link {
-          font-size: 0.78rem;
-          padding: 0.35rem 0.55rem;
-        }
-      }
-
-      .toc-wrapper::-webkit-scrollbar{
-        width: 5px;
-      }
-
-      .toc-wrapper::-webkit-scrollbar-track{
-        background: transparent;
-      }
-
-      .toc-wrapper::-webkit-scrollbar-thumb{
-        background: #bcb8d6;
-        border-radius: 999px;
-      }
-
-      .toc-link {
-        display: block;
-        color: rgba(17, 16, 46, 0.65);
-        font-size: 0.82rem;
-        line-height: 1.5;
-        padding: 0.4rem 0.65rem;
-        border-left: 1px solid #d4d0e6;
-        transition:
-          color 0.2s ease,
-          border-color 0.2s ease,
-          background-color 0.2s ease;
-      }
-
-      .toc-link:hover {
-        color: #26237a;
-        border-left-color: #615ebf;
-        background: rgba(97, 94, 191, 0.06);
-      }
-
-      /* ===== REDUCED MOTION ===== */
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-
-        .reveal {
-          opacity: 1 !important;
-          transform: none !important;
-          transition: none !important;
-        }
-      }
-    </style>
-  </head>
-
-  <body class="bg-body text-primary leading-relaxed antialiased">
-    <!-- =========================================================
-       HEADER
-  ========================================================== -->
-
-    <header
-      class="sticky top-0 z-50 bg-body/90 backdrop-blur-md border-b border-[#d4d0e6]"
-    >
-      <div class="max-w-[1100px] mx-auto px-5 sm:px-8">
-        <div class="h-[72px] flex items-center justify-between">
-          <!-- Logo / Brand -->
-
-          <a
-            href="index.html"
-            class="flex items-center gap-3 group"
-            aria-label="Kembali ke Teamply Nusantara"
-          >
-            <img
-              src="asset/Black_and_White_Minimalist_RT_Initial_Logo__2_-removebg-preview.png"
-              alt="Logo Teamply Nusantara"
-              class="w-9 h-9 object-contain"
-            />
-
-            <div class="hidden sm:block">
-              <div
-                class="font-['Space_Grotesk',sans-serif] font-semibold text-[15px] text-primary leading-none"
-              >
-                Teamply Nusantara
-              </div>
-
-              <div
-                class="font-['JetBrains_Mono',monospace] text-[9px] uppercase tracking-[0.12em] text-secondary/50 mt-1"
-              >
-                Digital Solutions
-              </div>
-            </div>
-          </a>
-
-          <!-- Back Button -->
-
-          <a
-            href="index.html"
-            class="font-['JetBrains_Mono',monospace] text-[11px] sm:text-[12px] uppercase tracking-[0.05em] text-secondary/70 hover:text-primary transition-colors inline-flex items-center gap-2"
-          >
-            <span class="text-base leading-none">←</span>
-            Kembali ke Website
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <!-- =========================================================
-       HERO
-  ========================================================== -->
-
+export default function SnkPage() {
+  return (
     <main>
-      <section class="pt-16 sm:pt-24 pb-12 sm:pb-16">
-        <div class="max-w-[1100px] mx-auto px-5 sm:px-8">
-          <div class="max-w-[780px] reveal">
-            <div
-              class="font-['JetBrains_Mono',monospace] text-[11px] tracking-[0.14em] uppercase text-accent flex items-center gap-[10px] mb-4"
-            >
-              <span class="w-[16px] h-[1px] bg-primary inline-block"></span>
-              Legal & Informasi
+      {/* ===== HERO ===== */}
+      <section className="pt-16 sm:pt-24 pb-12 sm:pb-16">
+        <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
+          <Reveal className="max-w-[780px]">
+            <div className="font-['JetBrains_Mono',monospace] text-[11px] tracking-[0.14em] uppercase text-accent flex items-center gap-[10px] mb-4">
+              <span className="w-[16px] h-[1px] bg-primary inline-block"></span>
+              Legal &amp; Informasi
             </div>
 
-            <h1
-              class="font-['Space_Grotesk',sans-serif] font-semibold text-[38px] sm:text-[52px] leading-[1.08] tracking-[-0.025em] text-primary"
-            >
-              Syarat & Ketentuan
+            <h1 className="font-['Space_Grotesk',sans-serif] font-semibold text-[38px] sm:text-[52px] leading-[1.08] tracking-[-0.025em] text-primary">
+              Syarat &amp; Ketentuan
             </h1>
 
-            <p
-              class="mt-5 text-secondary/65 text-[14px] sm:text-[15px] leading-relaxed max-w-[680px]"
-            >
+            <p className="mt-5 text-secondary/65 text-[14px] sm:text-[15px] leading-relaxed max-w-[680px]">
               Ketentuan yang mengatur proses diskusi, pemesanan, pengerjaan,
               pembayaran, hingga penyelesaian proyek bersama Teamply Nusantara.
             </p>
 
-            <div
-              class="mt-6 inline-flex items-center gap-2 font-['JetBrains_Mono',monospace] text-[10px] sm:text-[11px] uppercase tracking-[0.08em] text-secondary/50"
-            >
-              <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <div className="mt-6 inline-flex items-center gap-2 font-['JetBrains_Mono',monospace] text-[10px] sm:text-[11px] uppercase tracking-[0.08em] text-secondary/50">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
               Terakhir diperbarui: 11 Agustus 2026, 16:20 WIB
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <!-- =========================================================
-     CONTENT AREA
-========================================================== -->
-
-      <section class="pb-20 sm:pb-28">
-        <div class="max-w-[1100px] mx-auto px-5 sm:px-8">
-          <div
-            class="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)] gap-10 lg:gap-16"
-          >
-            <!-- =====================================================
-           TABLE OF CONTENTS
-      ====================================================== -->
-
-            <aside class="lg:block toc-sidebar">
-              <div class="toc-wrapper">
-                <div
-                  class="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.12em] text-secondary/50 mb-4 "
-                >
+      {/* ===== CONTENT AREA ===== */}
+      <section className="pb-20 sm:pb-28">
+        <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_minmax(0,1fr)] gap-10 lg:gap-16">
+            {/* ===== TABLE OF CONTENTS ===== */}
+            <aside className="lg:block toc-sidebar">
+              <div className="toc-wrapper">
+                <div className="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.12em] text-secondary/50 mb-4 ">
                   Daftar Isi
                 </div>
 
-                <nav class="space-y-0.5">
-                  <a href="#definisi" class="toc-link">01. Definisi</a>
-                  <a href="#penerima" class="toc-link">02. Penerima S&K</a>
-                  <a href="#pengguna" class="toc-link">03. Pengguna Jasa</a>
-                  <a href="#pemesanan" class="toc-link">04. Pemesanan</a>
-                  <a href="#harga" class="toc-link">05. Harga & Pembayaran</a>
-                  <a href="#pengerjaan" class="toc-link">06. Pengerjaan</a>
-                  <a href="#revisi" class="toc-link">07. Revisi</a>
-                  <a href="#materi" class="toc-link">08. Materi & Konten</a>
-                  <a href="#pihak-ketiga" class="toc-link">09. Pihak Ketiga</a>
-                  <a href="#domain" class="toc-link">10. Domain</a>
-                  <a href="#tanggung-jawab" class="toc-link"
-                    >11. Tanggung Jawab</a
-                  >
-                  <a href="#serah-terima" class="toc-link">12. Serah Terima</a>
-                  <a href="#pembatalan" class="toc-link">13. Pembatalan</a>
-                  <a href="#refund" class="toc-link">14. Pengembalian Dana</a>
-                  <a href="#privasi" class="toc-link">15. Privasi</a>
-                  <a href="#pelanggaran" class="toc-link">16. Pelanggaran</a>
-                  <a href="#darurat" class="toc-link">17. Keadaan Darurat</a>
-                  <a href="#perubahan" class="toc-link">18. Perubahan S&K</a>
-                  <a href="#hukum" class="toc-link">19. Hukum</a>
-                  <a href="#pemisahan" class="toc-link">20. Pemisahan</a>
-                  <a href="#hubungi" class="toc-link">21. Hubungi Kami</a>
+                <nav className="space-y-0.5">
+                  {TOC.map((item) => (
+                    <a key={item.id} href={`#${item.id}`} className="toc-link">
+                      {item.label}
+                    </a>
+                  ))}
                 </nav>
               </div>
             </aside>
 
-            <!-- =====================================================
-           DOCUMENT
-      ====================================================== -->
-
-            <article
-              class="bg-[#FBFAF6] border border-[#d4cfbc] rounded-[20px] px-6 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-14 shadow-sm"
-            >
-              <div class="snk-content">
-                <!-- INTRO -->
-
-                <div class="reveal">
-                  <p>Selamat datang di <strong>Teamply Nusantara</strong>.</p>
+            {/* ===== DOCUMENT ===== */}
+            <article className="bg-[#FBFAF6] border border-[#d4cfbc] rounded-[20px] px-6 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-14 shadow-sm">
+              <div className="snk-content">
+                {/* INTRO */}
+                <Reveal>
+                  <p>
+                    Selamat datang di <strong>Teamply Nusantara</strong>.
+                  </p>
 
                   <p>
                     Syarat dan Ketentuan ini dibuat untuk mengatur seluruh
-                    proses diskusi, pelayanan, pengembangan
-                    (<em>development</em>), hingga penyelesaian proyek. Dengan
+                    proses diskusi, pelayanan, pengembangan (
+                    <em>development</em>), hingga penyelesaian proyek. Dengan
                     mengakses, menggunakan, atau membeli layanan kami, Anda
                     dianggap telah membaca, memahami, menyetujui, dan bersedia
                     mematuhi seluruh Syarat dan Ketentuan yang berlaku.
@@ -421,15 +108,14 @@
 
                   <p>
                     Apabila terdapat ketentuan yang masih kurang jelas, Anda
-                    dapat mendiskusikannya lebih lanjut dengan tim
+                    dapat mendiskusikannya lebih lanjut dengan tim{' '}
                     <strong>Teamply Nusantara</strong> sebelum menggunakan
                     layanan kami.
                   </p>
-                </div>
+                </Reveal>
 
-                <!-- 01 -->
-
-                <section id="definisi" class="reveal">
+                {/* 01 */}
+                <Reveal as="section" id="definisi">
                   <h2>1. Definisi</h2>
 
                   <p>
@@ -439,27 +125,25 @@
 
                   <ol>
                     <li>
-                      <strong>“Teamply Nusantara”</strong>,
-                      <strong>“Kami”</strong>, <strong>“Penyedia”</strong>, atau
-                      <strong>“Tim”</strong>
-                      adalah pihak yang menyediakan dan mengelola layanan
-                      pembuatan website serta layanan digital lainnya yang
-                      ditawarkan oleh Teamply Nusantara.
+                      <strong>“Teamply Nusantara”</strong>,{' '}
+                      <strong>“Kami”</strong>, <strong>“Penyedia”</strong>, atau{' '}
+                      <strong>“Tim”</strong> adalah pihak yang menyediakan dan
+                      mengelola layanan pembuatan website serta layanan digital
+                      lainnya yang ditawarkan oleh Teamply Nusantara.
                     </li>
 
                     <li>
-                      <strong>“Pelanggan”</strong>, <strong>“Anda”</strong>,
-                      <strong>“Pengguna”</strong>, atau <strong>“Klien”</strong>
-                      adalah pihak yang mengakses, menggunakan, atau membeli
-                      layanan Teamply Nusantara.
+                      <strong>“Pelanggan”</strong>, <strong>“Anda”</strong>,{' '}
+                      <strong>“Pengguna”</strong>, atau{' '}
+                      <strong>“Klien”</strong> adalah pihak yang mengakses,
+                      menggunakan, atau membeli layanan Teamply Nusantara.
                     </li>
                   </ol>
-                </section>
+                </Reveal>
 
-                <!-- 02 -->
-
-                <section id="penerima" class="reveal">
-                  <h2>2. Penerimaan Syarat & Ketentuan</h2>
+                {/* 02 */}
+                <Reveal as="section" id="penerima">
+                  <h2>2. Penerimaan Syarat &amp; Ketentuan</h2>
 
                   <p>
                     Dengan menggunakan layanan yang disediakan oleh Teamply
@@ -487,11 +171,10 @@
                     Dengan menggunakan jasa kami, Anda wajib mengikuti seluruh
                     Syarat dan Ketentuan yang telah ditetapkan.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 03 -->
-
-                <section id="pengguna" class="reveal">
+                {/* 03 */}
+                <Reveal as="section" id="pengguna">
                   <h2>3. Pengguna Jasa</h2>
 
                   <p>
@@ -531,16 +214,15 @@
                     </li>
 
                     <li>
-                      Memberikan izin atau menolak izin kepada Teamply Nusantara
-                      untuk menampilkan website yang telah dibuat sebagai
-                      portofolio di website maupun media sosial kami.
+                      Memberikan izin atau menolak izin kepada Teamply
+                      Nusantara untuk menampilkan website yang telah dibuat
+                      sebagai portofolio di website maupun media sosial kami.
                     </li>
                   </ol>
-                </section>
+                </Reveal>
 
-                <!-- 04 -->
-
-                <section id="pemesanan" class="reveal">
+                {/* 04 */}
+                <Reveal as="section" id="pemesanan">
                   <h2>4. Pemesanan Layanan</h2>
 
                   <p>
@@ -567,15 +249,14 @@
                   </ol>
 
                   <p>
-                    Pengguna diharapkan memberikan informasi yang lengkap,
-                    jelas, dan tidak menyesatkan serta tidak bertentangan dengan
+                    Pengguna diharapkan memberikan informasi yang lengkap, jelas,
+                    dan tidak menyesatkan serta tidak bertentangan dengan
                     ketentuan yang berlaku.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 05 -->
-
-                <section id="harga" class="reveal">
+                {/* 05 */}
+                <Reveal as="section" id="harga">
                   <h2>5. Harga dan Pembayaran</h2>
 
                   <p>
@@ -586,7 +267,7 @@
 
                   <ol>
                     <li>
-                      Pembelian domain selain domain <strong>my.id</strong> dan
+                      Pembelian domain selain domain <strong>my.id</strong> dan{' '}
                       <strong>sch.id</strong>.
                     </li>
 
@@ -620,11 +301,10 @@
                     Pengguna wajib melakukan pembayaran sesuai dengan metode,
                     nominal, dan waktu yang telah disepakati.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 06 -->
-
-                <section id="pengerjaan" class="reveal">
+                {/* 06 */}
+                <Reveal as="section" id="pengerjaan">
                   <h2>6. Ketentuan Pengerjaan</h2>
 
                   <p>
@@ -635,8 +315,8 @@
 
                   <ol>
                     <li>
-                      Pengguna terlambat memberikan aset, materi, atau informasi
-                      yang diperlukan.
+                      Pengguna terlambat memberikan aset, materi, atau
+                      informasi yang diperlukan.
                     </li>
 
                     <li>
@@ -645,8 +325,8 @@
                     </li>
 
                     <li>
-                      Terdapat permintaan tambahan dari Klien di luar
-                      kesepakatan awal.
+                      Terdapat permintaan tambahan dari Klien di luar kesepakatan
+                      awal.
                     </li>
 
                     <li>
@@ -663,38 +343,37 @@
                   <p>
                     Apabila tidak terdapat kendala yang berasal dari pengguna,
                     pihak ketiga, atau keadaan di luar kendali kami, dan proyek
-                    melewati tenggat waktu yang telah disepakati karena
-                    kelalaian dari pihak kami, pengguna berhak memperoleh
-                    kompensasi berupa tambahan maintenance gratis selama
+                    melewati tenggat waktu yang telah disepakati karena kelalaian
+                    dari pihak kami, pengguna berhak memperoleh kompensasi berupa
+                    tambahan maintenance gratis selama{' '}
                     <strong>1 bulan</strong> atau tambahan kesempatan revisi
                     sesuai dengan kesepakatan.
                   </p>
 
                   <p>
                     Apabila keterlambatan disebabkan oleh pengguna sehingga
-                    proses pengerjaan menjadi lebih lama, kami berhak mengenakan
+                    proses pengerjaan menjadi lebih lama, kami berhak mengenakan{' '}
                     <em>Holding Fee</em> atau Biaya Keterlambatan berdasarkan
                     kesepakatan kedua belah pihak.
                   </p>
 
                   <p>
-                    Apabila keterlambatan tersebut menyebabkan proyek tidak
-                    dapat dilanjutkan atau pengguna tidak memenuhi kewajiban
-                    yang telah disepakati, kami berhak menghentikan proyek
-                    sesuai dengan ketentuan pembatalan yang berlaku.
+                    Apabila keterlambatan tersebut menyebabkan proyek tidak dapat
+                    dilanjutkan atau pengguna tidak memenuhi kewajiban yang telah
+                    disepakati, kami berhak menghentikan proyek sesuai dengan
+                    ketentuan pembatalan yang berlaku.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 07 -->
-
-                <section id="revisi" class="reveal">
+                {/* 07 */}
+                <Reveal as="section" id="revisi">
                   <h2>7. Revisi dan Perubahan</h2>
 
                   <p>
                     Pengguna dapat mengajukan revisi selama proses pengerjaan
                     berlangsung selama revisi tersebut masih berada dalam ruang
-                    lingkup proyek dan tidak melewati waktu pengerjaan yang
-                    telah disepakati.
+                    lingkup proyek dan tidak melewati waktu pengerjaan yang telah
+                    disepakati.
                   </p>
 
                   <p>
@@ -711,26 +390,24 @@
 
                   <p>
                     Permintaan yang mengubah konsep, struktur, fitur, ruang
-                    lingkup, atau hal lain di luar kesepakatan awal akan
-                    dianggap sebagai <strong>Pekerjaan Tambahan</strong>.
+                    lingkup, atau hal lain di luar kesepakatan awal akan dianggap
+                    sebagai <strong>Pekerjaan Tambahan</strong>.
                   </p>
 
                   <p>
-                    Pekerjaan Tambahan dapat dikenakan biaya tambahan
-                    berdasarkan tingkat pekerjaan dan kesepakatan kedua belah
-                    pihak.
+                    Pekerjaan Tambahan dapat dikenakan biaya tambahan berdasarkan
+                    tingkat pekerjaan dan kesepakatan kedua belah pihak.
                   </p>
 
                   <p>
-                    Klien tidak diperkenankan meminta pekerjaan di luar
+                    Klien tidak diperkenankan meminta pekerjaan di luar{' '}
                     <strong>SOW (Scope of Work)</strong> atau paket yang dipilih
                     tanpa adanya kesepakatan tambahan.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 08 -->
-
-                <section id="materi" class="reveal">
+                {/* 08 */}
+                <Reveal as="section" id="materi">
                   <h2>8. Materi dan Konten</h2>
 
                   <p>
@@ -740,8 +417,8 @@
 
                   <p>
                     Pengguna wajib memastikan bahwa materi yang diberikan
-                    memiliki hak atau izin penggunaan yang diperlukan serta
-                    tidak melanggar Hak Cipta maupun hak pihak lain.
+                    memiliki hak atau izin penggunaan yang diperlukan serta tidak
+                    melanggar Hak Cipta maupun hak pihak lain.
                   </p>
 
                   <p>Materi dan konten yang dimaksud dapat meliputi:</p>
@@ -760,8 +437,8 @@
                   <p>
                     Dengan memberikan materi kepada kami untuk digunakan dalam
                     proyek, pengguna menyatakan bahwa pengguna memiliki hak atau
-                    izin yang diperlukan untuk menggunakan dan menyerahkan
-                    materi tersebut kepada kami.
+                    izin yang diperlukan untuk menggunakan dan menyerahkan materi
+                    tersebut kepada kami.
                   </p>
 
                   <p>
@@ -773,7 +450,7 @@
                   <p>
                     Apabila terdapat tuntutan dari pihak luar akibat materi yang
                     diberikan pengguna, pengguna bertanggung jawab atas biaya
-                    atau kewajiban yang timbul dari tuntutan tersebut, termasuk
+                    atau kewajiban yang timbul dari tuntutan tersebut, termasuk{' '}
                     <em>License Fee</em> apabila diperlukan.
                   </p>
 
@@ -784,11 +461,10 @@
                     menonaktifkan website untuk sementara hingga masalah
                     tersebut diselesaikan.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 09 -->
-
-                <section id="pihak-ketiga" class="reveal">
+                {/* 09 */}
+                <Reveal as="section" id="pihak-ketiga">
                   <h2>9. Layanan Pihak Ketiga</h2>
 
                   <p>
@@ -808,8 +484,8 @@
 
                   <p>
                     Apabila terdapat biaya tambahan dari penyedia layanan pihak
-                    ketiga, biaya tersebut dapat dibebankan kepada pengguna
-                    setelah diinformasikan dan disepakati terlebih dahulu.
+                    ketiga, biaya tersebut dapat dibebankan kepada pengguna setelah
+                    diinformasikan dan disepakati terlebih dahulu.
                   </p>
 
                   <p>
@@ -817,21 +493,20 @@
                     masalah lain yang secara langsung disebabkan oleh pihak
                     ketiga berada di luar kendali kami.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 10 -->
-
-                <section id="domain" class="reveal">
+                {/* 10 */}
+                <Reveal as="section" id="domain">
                   <h2>10. Domain</h2>
 
                   <p>
                     Selama proses pembuatan website, kami menyediakan biaya
-                    domain secara gratis untuk <strong>tahun pertama</strong>
+                    domain secara gratis untuk <strong>tahun pertama</strong>{' '}
                     sesuai dengan ketentuan paket yang dipilih.
                   </p>
 
                   <p>
-                    Biaya perpanjangan domain mulai dari
+                    Biaya perpanjangan domain mulai dari{' '}
                     <strong>tahun kedua dan seterusnya</strong> menjadi tanggung
                     jawab Klien.
                   </p>
@@ -840,8 +515,8 @@
 
                   <ol>
                     <li>
-                      Hak kepemilikan dan penggunaan domain sepenuhnya berada
-                      pada Klien.
+                      Hak kepemilikan dan penggunaan domain sepenuhnya berada pada
+                      Klien.
                     </li>
 
                     <li>
@@ -852,8 +527,8 @@
 
                     <li>
                       Setelah proses pembelian dan konfigurasi selesai, apabila
-                      email Klien digunakan pada perangkat Tim Teamply
-                      Nusantara, akses tersebut akan dihapus dari perangkat Tim.
+                      email Klien digunakan pada perangkat Tim Teamply Nusantara,
+                      akses tersebut akan dihapus dari perangkat Tim.
                     </li>
 
                     <li>
@@ -870,15 +545,14 @@
 
                     <li>
                       Kami akan berusaha memberikan pengingat mengenai
-                      perpanjangan domain sekitar
+                      perpanjangan domain sekitar{' '}
                       <strong>1 bulan sebelum masa berlaku berakhir</strong>.
                     </li>
                   </ol>
-                </section>
+                </Reveal>
 
-                <!-- 11 -->
-
-                <section id="tanggung-jawab" class="reveal">
+                {/* 11 */}
+                <Reveal as="section" id="tanggung-jawab">
                   <h2>11. Batasan Tanggung Jawab</h2>
 
                   <p>
@@ -908,16 +582,15 @@
                   </ol>
 
                   <p>
-                    Apabila suatu masalah terbukti disebabkan oleh kelalaian
-                    kami, pengguna dapat memperoleh kompensasi berupa tambahan
+                    Apabila suatu masalah terbukti disebabkan oleh kelalaian kami,
+                    pengguna dapat memperoleh kompensasi berupa tambahan
                     maintenance gratis selama <strong>1 bulan</strong> atau
                     tambahan revisi sesuai dengan kesepakatan.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 12 -->
-
-                <section id="serah-terima" class="reveal">
+                {/* 12 */}
+                <Reveal as="section" id="serah-terima">
                   <h2>12. Serah Terima Proyek</h2>
 
                   <p>
@@ -927,22 +600,21 @@
                   </p>
 
                   <p>
-                    Apabila pembayaran belum sepenuhnya dilunasi atau masih
-                    dalam proses cicilan, akses penuh terhadap proyek dapat
-                    ditahan sampai kewajiban pembayaran sesuai kesepakatan telah
+                    Apabila pembayaran belum sepenuhnya dilunasi atau masih dalam
+                    proses cicilan, akses penuh terhadap proyek dapat ditahan
+                    sampai kewajiban pembayaran sesuai kesepakatan telah
                     dipenuhi.
                   </p>
 
                   <p>
-                    Setelah proses serah terima selesai, kami akan membantu
-                    Klien dalam proses pembelian dan/atau konfigurasi domain
-                    sesuai dengan ketentuan yang berlaku.
+                    Setelah proses serah terima selesai, kami akan membantu Klien
+                    dalam proses pembelian dan/atau konfigurasi domain sesuai
+                    dengan ketentuan yang berlaku.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 13 -->
-
-                <section id="pembatalan" class="reveal">
+                {/* 13 */}
+                <Reveal as="section" id="pembatalan">
                   <h2>13. Pembatalan Pesanan</h2>
 
                   <p>
@@ -952,10 +624,10 @@
 
                   <p>
                     Apabila pengguna membatalkan pesanan ketika proyek sedang
-                    dalam proses pengerjaan, kami berhak mengenakan
-                    <em>Cancellation Fee</em> dari uang muka yang telah
-                    diberikan, dengan besaran berdasarkan pekerjaan yang telah
-                    dilakukan dan kesepakatan kedua belah pihak.
+                    dalam proses pengerjaan, kami berhak mengenakan{' '}
+                    <em>Cancellation Fee</em> dari uang muka yang telah diberikan,
+                    dengan besaran berdasarkan pekerjaan yang telah dilakukan dan
+                    kesepakatan kedua belah pihak.
                   </p>
 
                   <p>
@@ -964,11 +636,10 @@
                     ketentuan refund pada bagian berikutnya serta hasil
                     pemeriksaan terhadap kondisi proyek.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 14 -->
-
-                <section id="refund" class="reveal">
+                {/* 14 */}
+                <Reveal as="section" id="refund">
                   <h2>14. Pengembalian Dana</h2>
 
                   <p>
@@ -994,11 +665,10 @@
                     ditentukan berdasarkan hasil pemeriksaan dan ketentuan yang
                     berlaku.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 15 -->
-
-                <section id="privasi" class="reveal">
+                {/* 15 */}
+                <Reveal as="section" id="privasi">
                   <h2>15. Privasi dan Perlindungan Data</h2>
 
                   <p>
@@ -1034,11 +704,10 @@
                     apabila relevan, mendiskusikannya dengan Klien terlebih
                     dahulu.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 16 -->
-
-                <section id="pelanggaran" class="reveal">
+                {/* 16 */}
+                <Reveal as="section" id="pelanggaran">
                   <h2>16. Pelanggaran Ketentuan</h2>
 
                   <p>
@@ -1064,18 +733,17 @@
                     Tindakan yang diambil akan mempertimbangkan tingkat, dampak,
                     dan kondisi pelanggaran yang terjadi.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 17 -->
-
-                <section id="darurat" class="reveal">
+                {/* 17 */}
+                <Reveal as="section" id="darurat">
                   <h2>17. Keadaan Darurat</h2>
 
                   <p>
                     Apabila terjadi keadaan di luar kendali kami, Tim Teamply
                     Nusantara tidak bertanggung jawab penuh atas keterlambatan
-                    atau kegagalan dalam menjalankan kewajiban yang secara
-                    langsung disebabkan oleh keadaan tersebut.
+                    atau kegagalan dalam menjalankan kewajiban yang secara langsung
+                    disebabkan oleh keadaan tersebut.
                   </p>
 
                   <p>Keadaan darurat dapat mencakup:</p>
@@ -1096,18 +764,17 @@
                     apabila keadaan tersebut berdampak pada layanan atau proses
                     pengerjaan proyek.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 18 -->
-
-                <section id="perubahan" class="reveal">
-                  <h2>18. Perubahan Syarat & Ketentuan</h2>
+                {/* 18 */}
+                <Reveal as="section" id="perubahan">
+                  <h2>18. Perubahan Syarat &amp; Ketentuan</h2>
 
                   <p>
                     Kami dapat memperbarui Syarat dan Ketentuan apabila terdapat
                     perubahan layanan, teknologi, kebijakan, kebutuhan
-                    operasional, atau perubahan hukum dan peraturan yang berlaku
-                    di Indonesia.
+                    operasional, atau perubahan hukum dan peraturan yang berlaku di
+                    Indonesia.
                   </p>
 
                   <p>Perubahan dapat dilakukan untuk menyesuaikan dengan:</p>
@@ -1125,11 +792,10 @@
                     untuk penggunaan layanan setelah perubahan tersebut
                     diberlakukan.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 19 -->
-
-                <section id="hukum" class="reveal">
+                {/* 19 */}
+                <Reveal as="section" id="hukum">
                   <h2>19. Hukum yang Berlaku</h2>
 
                   <p>
@@ -1145,21 +811,20 @@
 
                   <p>
                     Apabila penyelesaian melalui musyawarah tidak mencapai
-                    kesepakatan, penyelesaian selanjutnya dilakukan sesuai
-                    dengan ketentuan hukum yang berlaku di Republik Indonesia.
+                    kesepakatan, penyelesaian selanjutnya dilakukan sesuai dengan
+                    ketentuan hukum yang berlaku di Republik Indonesia.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 20 -->
-
-                <section id="pemisahan" class="reveal">
+                {/* 20 */}
+                <Reveal as="section" id="pemisahan">
                   <h2>20. Pemisahan Ketentuan</h2>
 
                   <p>
                     Apabila salah satu ketentuan dalam Syarat dan Ketentuan ini
                     dinyatakan tidak berlaku, tidak sah, atau tidak dapat
-                    dilaksanakan berdasarkan hukum yang berlaku, ketentuan
-                    lainnya tetap berlaku sepenuhnya.
+                    dilaksanakan berdasarkan hukum yang berlaku, ketentuan lainnya
+                    tetap berlaku sepenuhnya.
                   </p>
 
                   <p>
@@ -1167,11 +832,10 @@
                     sejauh diperlukan agar tetap dapat diterapkan secara sah,
                     tanpa memengaruhi keberlakuan ketentuan lainnya.
                   </p>
-                </section>
+                </Reveal>
 
-                <!-- 21 -->
-
-                <section id="hubungi" class="reveal">
+                {/* 21 */}
+                <Reveal as="section" id="hubungi">
                   <h2>21. Hubungi Kami</h2>
 
                   <p>
@@ -1180,132 +844,50 @@
                     melalui saluran berikut:
                   </p>
 
-                  <div
-                    class="mt-5 p-5 sm:p-6 rounded-[14px] bg-body/60 border border-[#d4cfbc]"
-                  >
-                    <p class="!mb-2">
+                  <div className="mt-5 p-5 sm:p-6 rounded-[14px] bg-body/60 border border-[#d4cfbc]">
+                    <p className="!mb-2">
                       <strong>Teamply Nusantara</strong>
                     </p>
 
-                    <p class="!mb-1">
-                      Email:
-                      <a href="mailto:teamplynusantara@email.com">
-                        teamplynusantara@email.com
-                      </a>
+                    <p className="!mb-1">
+                      Email:{' '}
+                      <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
                     </p>
 
-                    <p class="!mb-1">
-                      WhatsApp:
+                    <p className="!mb-1">
+                      WhatsApp:{' '}
                       <a
-                        href="https://wa.me/6285212350700"
+                        href={`https://wa.me/${SITE.waNumber}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        +62 852-1235-0700
+                        {SITE.phoneDisplay}
                       </a>
                     </p>
 
-                    <p class="!mb-0">
-                      Website:
-                      <a href="index.html"> teamplynusantara.com </a>
+                    <p className="!mb-0">
+                      Website:{' '}
+                      <Link href="/">
+                        {' '}
+                        teamplynusantara.com{' '}
+                      </Link>
                     </p>
                   </div>
-                </section>
+                </Reveal>
 
-                <!-- FINAL NOTE -->
-
-                <div class="mt-12 pt-8 border-t border-[#d4cfbc] reveal">
-                  <p
-                    class="!mb-0 text-secondary/55 text-[13px] leading-relaxed"
-                  >
+                {/* FINAL NOTE */}
+                <Reveal className="mt-12 pt-8 border-t border-[#d4cfbc]">
+                  <p className="!mb-0 text-secondary/55 text-[13px] leading-relaxed">
                     Dengan menggunakan layanan Teamply Nusantara, Anda dianggap
                     telah membaca, memahami, dan menyetujui Syarat dan Ketentuan
                     yang berlaku.
                   </p>
-                </div>
+                </Reveal>
               </div>
             </article>
           </div>
         </div>
       </section>
     </main>
-
-    <!-- =========================================================
-       FOOTER
-  ========================================================== -->
-
-    <footer class="border-t border-[#d4d0e6]">
-      <div class="max-w-[1100px] mx-auto px-5 sm:px-8">
-        <div
-          class="py-8 flex flex-col sm:flex-row items-center justify-between gap-4"
-        >
-          <p
-            class="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.08em] text-secondary/40 text-center sm:text-left"
-          >
-            © 2026 Teamply Nusantara. All rights reserved.
-          </p>
-
-          <a
-            href="index.html"
-            class="font-['JetBrains_Mono',monospace] text-[10px] uppercase tracking-[0.08em] text-secondary/50 hover:text-primary transition-colors"
-          >
-            Kembali ke Beranda ↑
-          </a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- =========================================================
-       JAVASCRIPT
-  ========================================================== -->
-
-    <script>
-      /* =========================================================
-       SCROLL REVEAL
-    ========================================================== */
-
-      (function () {
-        const revealEls = document.querySelectorAll(".reveal");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            threshold: 0.12,
-            rootMargin: "0px 0px -5% 0px",
-          },
-        );
-
-        revealEls.forEach((el) => observer.observe(el));
-      })();
-
-      /* =========================================================
-       SMOOTH SCROLL UNTUK DAFTAR ISI
-    ========================================================== */
-
-      document.querySelectorAll('a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", function (e) {
-          const targetId = this.getAttribute("href").slice(1);
-
-          const target = document.getElementById(targetId);
-
-          if (target) {
-            e.preventDefault();
-
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-    </script>
-  </body>
-</html>
+  );
+}
