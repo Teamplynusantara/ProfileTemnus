@@ -174,11 +174,14 @@ export default function Header() {
             <div
               id="galleryDropdown"
               ref={galleryRef}
-              className={`${
-                galleryOpen ? '' : 'hidden'
-              } fixed top-[82px] left-0 right-0 z-50`}
+              aria-hidden={!galleryOpen}
+              className={`fixed top-[72px] sm:top-[82px] left-0 right-0 z-50 transition-all duration-300 ease-out transform ${
+                galleryOpen
+                  ? 'opacity-100 translate-y-0 visible pointer-events-auto'
+                  : 'opacity-0 -translate-y-6 invisible pointer-events-none'
+              }`}
             >
-              <div className="bg-body border-y border-[#D4CFBC] shadow-[0_18px_40px_rgba(38,35,122,0.10)]">
+              <div className="bg-body border-y border-[#D4CFBC] shadow-[0_18px_40px_rgba(38,35,122,0.12)]">
                 <div className="max-w-[1180px] mx-auto px-5 sm:px-[40px] py-8 lg:py-10">
                   <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.5fr] gap-8 lg:gap-14">
                     {/* Intro Column */}
@@ -297,7 +300,11 @@ export default function Header() {
       {/* Mobile Navigation */}
       <div
         id="mobileMenu"
-        className={`${mobileOpen ? '' : 'hidden'} md:hidden border-t border-[#D4CFBC] bg-body`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-body ${
+          mobileOpen
+            ? 'max-h-[500px] opacity-100 visible border-t border-[#D4CFBC]'
+            : 'max-h-0 opacity-0 invisible border-t border-transparent'
+        }`}
       >
         <div className="max-w-[1180px] mx-auto px-5 py-4 flex flex-col">
           {NAV_ITEMS.map((item) => (
@@ -341,18 +348,24 @@ export default function Header() {
 
             <div
               id="mobileGalleryDropdown"
-              className={`${mobileGalleryOpen ? '' : 'hidden'} pb-3 pl-3`}
+              className={`grid transition-all duration-300 ease-in-out ${
+                mobileGalleryOpen
+                  ? 'grid-rows-[1fr] opacity-100'
+                  : 'grid-rows-[0fr] opacity-0 pointer-events-none'
+              }`}
             >
-              {GALLERY_MENU.map((menu) => (
-                <Link
-                  key={menu.href}
-                  href={menu.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center py-3 text-sm text-secondary hover:text-primary cursor-pointer"
-                >
-                  {menu.title}
-                </Link>
-              ))}
+              <div className="overflow-hidden pl-3">
+                {GALLERY_MENU.map((menu) => (
+                  <Link
+                    key={menu.href}
+                    href={menu.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center py-2.5 text-sm text-secondary hover:text-primary transition-colors cursor-pointer"
+                  >
+                    {menu.title}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
